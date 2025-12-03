@@ -29,7 +29,7 @@ const resources = {
 };
 
 i18n
-  .use(LanguageDetector) // Detekuje jazyk z browseru
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
