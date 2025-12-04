@@ -11,5 +11,4 @@ export class RootStore {
   }
 }
 
-// Singleton instance
 export const rootStore = new RootStore();

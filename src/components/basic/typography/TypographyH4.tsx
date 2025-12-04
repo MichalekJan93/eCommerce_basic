@@ -1,0 +1,9 @@
+const TypographyH4 = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <h1 className="scroll-m-20 text-xl font-semibold tracking-tight">
+      {children}
+    </h1>
+  );
+};
+
+export default TypographyH4;

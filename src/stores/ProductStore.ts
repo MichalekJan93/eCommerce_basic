@@ -40,19 +40,16 @@ export class ProductStore {
   get filteredProducts() {
     let filtered = this.products;
 
-    // Filter by category
     if (this.selectedCategory) {
       filtered = filtered.filter((p) => p.category === this.selectedCategory);
     }
 
-    // Filter by search
     if (this.searchQuery) {
       filtered = filtered.filter((p) =>
         p.name.toLowerCase().includes(this.searchQuery.toLowerCase())
       );
     }
 
-    // Sort
     return filtered.sort((a, b) => {
       switch (this.sortBy) {
         case "price-asc":

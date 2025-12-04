@@ -1,6 +1,12 @@
-import { StoreProvider } from "../hooks/useStore";
-import { rootStore } from "../stores/RootStore";
+import StoreProvider from "@/providers/store/StoreProvider";
+import { ThemeProvider } from "@/providers/theme/ThemeProvider";
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  return <StoreProvider value={rootStore}>{children}</StoreProvider>;
+  return (
+    <StoreProvider>
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        {children}
+      </ThemeProvider>
+    </StoreProvider>
+  );
 }

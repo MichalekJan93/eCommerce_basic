@@ -2,7 +2,6 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
-// Import translations
 import commonEN from "../locales/en/common.json";
 import productsEN from "../locales/en/products.json";
 import cartEN from "../locales/en/cart.json";

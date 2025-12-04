@@ -1,9 +1,5 @@
-import { createContext, useContext } from "react";
-import { RootStore } from "../stores/RootStore";
-
-const StoreContext = createContext<RootStore | null>(null);
-
-export const StoreProvider = StoreContext.Provider;
+import { useContext } from "react";
+import { StoreContext } from "../providers/store/StoreContext";
 
 export const useStore = () => {
   const store = useContext(StoreContext);
@@ -13,6 +9,5 @@ export const useStore = () => {
   return store;
 };
 
-// Convenience hooks
 export const useCartStore = () => useStore().cartStore;
 export const useProductStore = () => useStore().productStore;

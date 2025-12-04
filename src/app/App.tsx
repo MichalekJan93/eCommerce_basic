@@ -1,7 +1,9 @@
+import Header from "@/components/layout/Header";
+
 function App() {
   return (
     <>
-      <p className="text-3xl">Hello</p>
+      <Header />
     </>
   );
 }
