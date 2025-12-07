@@ -1,6 +1,10 @@
 import { ThemeProviderContext } from "@/providers/theme/ThemeContext";
 import { useContext } from "react";
 
+/**
+ * Hook for accessing theme
+ * @returns ThemeProviderState
+ */
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext);
 

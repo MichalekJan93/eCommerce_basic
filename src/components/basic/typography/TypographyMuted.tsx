@@ -1,5 +1,5 @@
-const TypographyP = ({ children }: { children: React.ReactNode }) => {
-  return <h1 className="leading-7 not-first:mt-6">{children}</h1>;
+const TypographyMuted = ({ children }: { children: React.ReactNode }) => {
+  return <p className="text-muted-foreground text-sm">{children}</p>;
 };
 
-export default TypographyP;
+export default TypographyMuted;

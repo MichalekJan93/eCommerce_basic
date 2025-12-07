@@ -1,1 +1,124 @@
-{}
+{
+  "category": {
+    "phones": "Telefony",
+    "computers": "Počítače",
+    "appliances": "Spotřebiče"
+  },
+  "category_description": {
+    "phones": "Nejnovější telefony od nejpopulárnějších značek.",
+    "computers": "Nejnovější počítače od nejpopulárnějších značek.",
+    "appliances": "Nejnovější spotřebiče od nejpopulárnějších značek."
+  },
+  "sub_category": {
+    "iphone": "iPhone",
+    "samsung": "Samsung",
+    "xiaomi": "Xiaomi",
+    "apple": "Apple",
+    "lenovo": "Lenovo",
+    "dell": "Dell",
+    "refrigerator": "Lednice",
+    "freezer": "Mrazáky",
+    "washing_machine": "Pračky",
+    "iphone_17": "iPhone 17",
+    "iphone_16": "iPhone 16",
+    "iphone_15": "iPhone 15",
+    "samsung_s23": "Samsung s23",
+    "samsung_s22": "Samsung s22",
+    "samsung_s21": "Samsung s21",
+    "xiaomi_14": "Xiaomi 14",
+    "xiaomi_13": "Xiaomi 13",
+    "xiaomi_12": "Xiaomi 12",
+    "apple_macbook": "MacBook",
+    "apple_imac": "iMac",
+    "apple_ipad": "iPad",
+    "lenovo_thinkpad": "Thinkpad",
+    "lenovo_ideapad": "Ideapad",
+    "lenovo_yoga": "Yoga",
+    "dell_xps": "XPS",
+    "dell_inspiron": "Inspiron",
+    "dell_latitude": "Latitude",
+    "lg": "LG",
+    "bosch": "Bosch"
+  },
+  "sub_category_description": {
+    "iphone": "V této kategorii najdete nejnovější modely iPhone i starší generace, které stále drží krok s moderními požadavky. Ať už hledáte zařízení pro práci, tvorbu obsahu nebo každodenní komunikaci, iPhone je volba, kterou lze obhájit bez zaváhání.",
+    "samsung": "V této kategorii naleznete jak prémiové modely řady Galaxy S a Z, tak cenově dostupnější telefony Galaxy A, které přinášejí výborný poměr ceny a výkonu. Samsung je ideální volbou pro uživatele, kteří hledají spolehlivé zařízení s nejnovějšími funkcemi, kvalitním zpracováním a dlouhou životností.",
+    "xiaomi": "Nabízí moderní chytré telefony s vysokým výkonem a přívětivou cenou. Xiaomi je skvělou volbou pro uživatele, kteří chtějí maximum funkcí za rozumné náklady.",
+    "apple": "Zahrnuje kompletní ekosystém zařízení Apple, která vynikají kvalitou, výkonem a dlouhodobou spolehlivostí.",
+    "lenovo": "Široká nabídka notebooků a zařízení Lenovo, která kombinují výkon, ergonomii a spolehlivost pro práci i domácí použití.",
+    "dell": "Zařízení Dell jsou známá svou odolností a vysokým výkonem, ideální volba pro profesionální i firemní nasazení.",
+    "refrigerator": "Výběr moderních chladniček s důrazem na úsporu energie, kapacitu a spolehlivé chlazení potravin.",
+    "freezer": "Kategorie mrazáků nabízející efektivní a stabilní mrazení s dostatečným prostorem pro dlouhodobé skladování potravin.",
+    "washing_machine": "Pračky navržené pro efektivní praní s nízkou spotřebou vody a energie, vhodné pro domácnosti všech velikostí.",
+    "iphone_17": "Nejnovější generace iPhone přinášející špičkový výkon, lepší fotoaparát a nejmodernější funkce.",
+    "iphone_16": "Výkonný a moderní model iPhone nabízející skvělý poměr výkonu a spotřeby s dlouhou softwarovou podporou.",
+    "iphone_15": "Stylový iPhone s kvalitním fotoaparátem a spolehlivým výkonem pro každodenní používání.",
+    "samsung_s23": "Prémiový Samsung s vynikajícím displejem, vysokým výkonem a pokročilým fotoaparátem.",
+    "samsung_s22": "Výkonný smartphone série Galaxy s elegantním designem a kvalitním fotoaparátem.",
+    "samsung_s21": "Spolehlivý model Galaxy s dobrým výkonem a solidními funkcemi pro běžné používání.",
+    "xiaomi_14": "Výkonný model s moderním designem a špičkovými funkcemi za velmi konkurenceschopnou cenu.",
+    "xiaomi_13": "Vyvážený telefon kombinující dobrý výkon, kvalitní fotoaparát a příznivou cenu.",
+    "xiaomi_12": "Stylové zařízení s dostatečným výkonem a kvalitním displejem pro každodenní úkoly.",
+    "apple_macbook": "Profesionální notebooky MacBook s výkonnými čipy Apple Silicon a prémiovým zpracováním.",
+    "apple_imac": "Elegantní stolní počítače iMac s výkonným hardwarem a prvotřídním displejem.",
+    "apple_ipad": "Tablety iPad poskytující výkon, flexibilitu a široké možnosti využití pro práci i zábavu.",
+    "lenovo_thinkpad": "Odolné a profesionální notebooky ThinkPad s vynikající ergonomií a spolehlivostí.",
+    "lenovo_ideapad": "Cenově dostupné notebooky IdeaPad vhodné pro studenty i domácí použití.",
+    "lenovo_yoga": "Flexibilní zařízení Yoga s dotykovým displejem a všestranným využitím.",
+    "dell_xps": "Prémiové notebooky XPS s vynikajícím displejem, výkonem a tenkým provedením.",
+    "dell_inspiron": "Dostupná řada Inspiron nabízející dobrý výkon pro běžné každodenní úkoly.",
+    "dell_latitude": "Firemní notebooky Latitude známé vysokou spolehlivostí a dlouhou životností.",
+    "lg": "Široká nabídka elektroniky LG se zaměřením na kvalitu, výkon a moderní technologie.",
+    "bosch": "Domácí spotřebiče Bosch proslulé svou spolehlivostí, úsporou energie a dlouhou životností."
+  },
+  "product": {
+    "iphone_17_pro_white": {
+      "name": "iPhone 17 Pro White",
+      "short_description": "Výkonný iPhone s titanovým rámem a čipem A17 Pro.",
+      "long_description": "iPhone 17 Pro. Vůbec nejvýkonnější iPhone. Brilantní 6,3palcový displej, hliníková unibody konstrukce, čip A19 Pro, rozlišení 48Mpx u všech zadních fotoaparátů a vůbec nejdelší výdrž baterie.",
+      "color": "Bílý titán",
+      "currency": "CZK",
+      "price": 34990
+    },
+    "iphone_17_pro_orange": {
+      "name": "iPhone 17 Pro Orange",
+      "short_description": "Výkonný iPhone s oranžovým rámem a čipem A17 Pro.",
+      "long_description": "iPhone 17 Pro. Vůbec nejvýkonnější iPhone. Brilantní 6,3palcový displej, hliníková unibody konstrukce, čip A19 Pro, rozlišení 48Mpx u všech zadních fotoaparátů a vůbec nejdelší výdrž baterie.",
+      "color": "Oranžový titán",
+      "currency": "CZK",
+      "price": 34990
+    },
+    "iphone_16_pro_titanium": {
+      "name": "iPhone 16 Pro Titanium",
+      "short_description": "Výkonný iPhone s titanovým rámem a čipem A16 Pro.",
+      "long_description": "iPhone 16 Pro přináší titanovou konstrukci, čip A16 Pro, Action Button a USB-C.",
+      "color": "Titán",
+      "currency": "CZK",
+      "price": 27990
+    },
+    "iphone_16_pro_white": {
+      "name": "iPhone 16 Pro White",
+      "short_description": "Výkonný iPhone s bílým rámem a čipem A16 Pro.",
+      "long_description": "iPhone 16 Pro přináší titanovou konstrukci, čip A16 Pro, Action Button a USB-C.",
+      "color": "Bílý",
+      "currency": "CZK",
+      "price": 27990
+    },
+    "iphone_15_pro_black": {
+      "name": "iPhone 15 Pro Black",
+      "short_description": "Výkonný iPhone s černým rámem a čipem A15 Pro.",
+      "long_description": "iPhone 15 Pro přináší titanovou konstrukci, čip A15 Pro, Action Button a USB-C.",
+      "color": "Černý",
+      "currency": "CZK",
+      "price": 24990
+    },
+    "iphone_15_pro_white": {
+      "name": "iPhone 15 Pro White",
+      "short_description": "Výkonný iPhone s bílým rámem a čipem A15 Pro.",
+      "long_description": "iPhone 15 Pro přináší titanovou konstrukci, čip A15 Pro, Action Button a USB-C.",
+      "color": "Bílý",
+      "currency": "CZK",
+      "price": 24990
+    }
+  }
+}

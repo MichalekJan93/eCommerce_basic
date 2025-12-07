@@ -1,1 +1,124 @@
-{}
+{
+  "category": {
+    "phones": "Phones",
+    "computers": "Computers",
+    "appliances": "Appliances"
+  },
+  "category_description": {
+    "phones": "Latest phones from the most popular brands.",
+    "computers": "Latest computers from the most popular brands.",
+    "appliances": "Latest appliances from the most popular brands."
+  },
+  "sub_category": {
+    "iphone": "iPhone",
+    "samsung": "Samsung",
+    "xiaomi": "Xiaomi",
+    "apple": "Apple",
+    "lenovo": "Lenovo",
+    "dell": "Dell",
+    "refrigerator": "Refrigerator",
+    "freezer": "Freezer",
+    "washing_machine": "Washing Machine",
+    "iphone_17": "iPhone 17",
+    "iphone_16": "iPhone 16",
+    "iphone_15": "iPhone 15",
+    "samsung_s23": "Samsung s23",
+    "samsung_s22": "Samsung s22",
+    "samsung_s21": "Samsung s21",
+    "xiaomi_14": "Xiaomi 14",
+    "xiaomi_13": "Xiaomi 13",
+    "xiaomi_12": "Xiaomi 12",
+    "apple_macbook": "MacBook",
+    "apple_imac": "iMac",
+    "apple_ipad": "iPad",
+    "lenovo_thinkpad": "Thinkpad",
+    "lenovo_ideapad": "Ideapad",
+    "lenovo_yoga": "Yoga",
+    "dell_xps": "XPS",
+    "dell_inspiron": "Inspiron",
+    "dell_latitude": "Latitude",
+    "lg": "LG",
+    "bosch": "Bosch"
+  },
+  "sub_category_description": {
+    "iphone": "Here you will find the latest iPhone models as well as previous generations that continue to deliver impressive performance. Whether you need a device for professional use, content creation, or everyday communication, the iPhone is a choice you can confidently stand behind.",
+    "samsung": "Within this category, you’ll find top-tier Galaxy S and Z models as well as more budget-friendly Galaxy A devices that offer excellent value. Samsung phones are an ideal choice for users seeking reliable performance, modern features, and durable craftsmanship across all price ranges.",
+    "xiaomi": "Offers modern smartphones with strong performance and excellent pricing, making Xiaomi a great choice for users who want maximum features at minimal cost.",
+    "apple": "A complete ecosystem of Apple devices known for quality, performance, and long-term reliability.",
+    "lenovo": "A broad selection of Lenovo devices combining performance, ergonomics, and reliability for both work and home use.",
+    "dell": "Dell devices are recognized for durability and strong performance, ideal for professional and business environments.",
+    "refrigerator": "A selection of modern refrigerators focusing on energy efficiency, capacity, and reliable cooling.",
+    "freezer": "Freezers offering stable, efficient freezing with ample space for long-term food storage.",
+    "washing_machine": "Washing machines designed for efficient cleaning with low water and energy consumption.",
+    "iphone_17": "The latest iPhone generation delivering top performance, improved cameras, and cutting-edge features.",
+    "iphone_16": "A powerful and modern iPhone offering excellent efficiency and long-term software support.",
+    "iphone_15": "A stylish iPhone with reliable performance and a high-quality camera for everyday use.",
+    "samsung_s23": "A premium Samsung device with a superb display, strong performance, and advanced cameras.",
+    "samsung_s22": "A high-performing Galaxy smartphone with elegant design and quality imaging capabilities.",
+    "samsung_s21": "A dependable Galaxy model offering solid performance and features for daily use.",
+    "xiaomi_14": "A high-performance phone with modern design and flagship features at a competitive price.",
+    "xiaomi_13": "A balanced smartphone combining good performance, a quality camera, and attractive pricing.",
+    "xiaomi_12": "A stylish device offering sufficient performance and a quality display for everyday tasks.",
+    "apple_macbook": "Professional MacBook laptops with powerful Apple Silicon chips and premium build quality.",
+    "apple_imac": "Elegant iMac desktop computers with strong performance and outstanding displays.",
+    "apple_ipad": "iPad tablets providing performance, flexibility, and wide usability for work and entertainment.",
+    "lenovo_thinkpad": "Durable and professional ThinkPad laptops known for reliability and excellent ergonomics.",
+    "lenovo_ideapad": "Affordable IdeaPad laptops suitable for students and home users.",
+    "lenovo_yoga": "Versatile Yoga devices with touchscreens designed for flexible, multi-mode use.",
+    "dell_xps": "Premium XPS notebooks offering outstanding displays, high performance, and slim design.",
+    "dell_inspiron": "Budget-friendly Inspiron laptops providing solid performance for everyday tasks.",
+    "dell_latitude": "Business-class Latitude notebooks known for reliability and long operational lifespan.",
+    "lg": "A range of LG electronics focused on quality, performance, and modern technology.",
+    "bosch": "Bosch home appliances renowned for reliability, efficiency, and long service life."
+  },
+  "product": {
+    "iphone_17_pro_white": {
+      "name": "iPhone 17 Pro White",
+      "short_description": "The most powerful iPhone ever with a white frame and A17 Pro chip.",
+      "long_description": "iPhone 17 Pro. The most powerful iPhone ever. 6.3'' Super Retina XDR display, titanium unibody, A17 Pro chip, 48MP resolution on all rear cameras and the longest battery life ever.",
+      "color": "White Titanium",
+      "currency": "EUR",
+      "price": 1299
+    },
+    "iphone_17_pro_orange": {
+      "name": "iPhone 17 Pro Orange",
+      "short_description": "The most powerful iPhone ever with an orange frame and A17 Pro chip.",
+      "long_description": "iPhone 17 Pro. The most powerful iPhone ever. 6.3'' Super Retina XDR display, titanium unibody, A17 Pro chip, 48MP resolution on all rear cameras and the longest battery life ever.",
+      "color": "Orange Titanium",
+      "currency": "EUR",
+      "price": 1299
+    },
+    "iphone_16_pro_titanium": {
+      "name": "iPhone 16 Pro Titanium",
+      "short_description": "The most powerful iPhone ever with a titanium frame and A16 Pro chip.",
+      "long_description": "iPhone 16 Pro. The most powerful iPhone ever. 6.3'' Super Retina XDR display, titanium unibody, A16 Pro chip, 48MP resolution on all rear cameras and the longest battery life ever.",
+      "color": "Titanium",
+      "currency": "EUR",
+      "price": 1099
+    },
+    "iphone_16_pro_white": {
+      "name": "iPhone 16 Pro White",
+      "short_description": "The most powerful iPhone ever with a white frame and A16 Pro chip.",
+      "long_description": "iPhone 16 Pro. The most powerful iPhone ever. 6.3'' Super Retina XDR display, titanium unibody, A16 Pro chip, 48MP resolution on all rear cameras and the longest battery life ever.",
+      "color": "White",
+      "currency": "EUR",
+      "price": 1099
+    },
+    "iphone_15_pro_black": {
+      "name": "iPhone 15 Pro Black",
+      "short_description": "The most powerful iPhone ever with a black frame and A15 Pro chip.",
+      "long_description": "iPhone 15 Pro. The most powerful iPhone ever. 6.3'' Super Retina XDR display, titanium unibody, A15 Pro chip, 48MP resolution on all rear cameras and the longest battery life ever.",
+      "color": "Black",
+      "currency": "EUR",
+      "price": 899
+    },
+    "iphone_15_pro_white": {
+      "name": "iPhone 15 Pro White",
+      "short_description": "The most powerful iPhone ever with a white frame and A15 Pro chip.",
+      "long_description": "iPhone 15 Pro. The most powerful iPhone ever. 6.3'' Super Retina XDR display, titanium unibody, A15 Pro chip, 48MP resolution on all rear cameras and the longest battery life ever.",
+      "color": "White",
+      "currency": "EUR",
+      "price": 899
+    }
+  }
+}

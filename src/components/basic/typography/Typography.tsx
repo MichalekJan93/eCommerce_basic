@@ -19,7 +19,7 @@ type TypographyType =
   | "muted";
 
 interface ITypography {
-  type: TypographyType;
+  type?: TypographyType;
   intlId?: string;
   intlParams?: Record<string, string>;
   children?: React.ReactNode;

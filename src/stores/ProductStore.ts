@@ -1,56 +1,115 @@
+import { categories as allCategories } from "@/data/category";
+import { products as allProducts } from "@/data/products";
+import type { Category, Product, SubCategory } from "@/types/types";
 import { makeAutoObservable } from "mobx";
 
-export interface Product {
-  id: string;
-  name: string;
-  price: number;
-  category: string;
-  image: string;
-  description: string;
-  rating: number;
-  inStock: boolean;
-}
+/**
+ * Recursively search for a category by ID in the category tree
+ */
+const findCategoryById = (
+  categories: (Category | SubCategory)[],
+  categoryId: string
+): Category | SubCategory | null => {
+  for (const category of categories) {
+    if (category.id === categoryId) {
+      return category;
+    }
+    if (category.subCategories && category.subCategories.length > 0) {
+      const found = findCategoryById(category.subCategories, categoryId);
+      if (found) {
+        return found;
+      }
+    }
+  }
+  return null;
+};
 
 export class ProductStore {
   products: Product[] = [];
-  selectedCategory: string | null = null;
+  selectedCategory: Category | SubCategory | null = null;
   searchQuery: string = "";
   sortBy: "price-asc" | "price-desc" | "name" = "name";
+  loading: boolean = false;
 
   constructor() {
     makeAutoObservable(this);
+    this.loadProducts();
   }
 
-  setProducts(products: Product[]) {
-    this.products = products;
+  /**
+   * Load products from data file
+   */
+  loadProducts = () => {
+    this.products = allProducts;
+    this.loading = true;
+  };
+
+  /**
+   * Get loading state
+   */
+  get isLoaded() {
+    return this.loading;
   }
 
-  setCategory(category: string | null) {
-    this.selectedCategory = category;
-  }
+  /**
+   * Set selected category
+   * @param categoryId  - ID of category
+   */
+  setCategory = (categoryId: string | null) => {
+    if (!categoryId) {
+      this.selectedCategory = null;
+      return;
+    }
+    this.selectedCategory = findCategoryById(allCategories, categoryId);
+  };
 
-  setSearchQuery(query: string) {
+  /**
+   * Set search query
+   * @param query - Search query
+   */
+  setSearchQuery = (query: string) => {
     this.searchQuery = query;
-  }
+  };
 
-  setSortBy(sortBy: "price-asc" | "price-desc" | "name") {
+  /**
+   * Set sort by
+   * @param sortBy - Sort by
+   */
+  setSortBy = (sortBy: "price-asc" | "price-desc" | "name") => {
     this.sortBy = sortBy;
-  }
+  };
 
+  /**
+   * Reset all filters
+   */
+  resetFilters = () => {
+    this.selectedCategory = null;
+    this.searchQuery = "";
+    this.sortBy = "name";
+  };
+
+  /**
+   * Get filtered and sorted products
+   */
   get filteredProducts() {
     let filtered = this.products;
 
+    // Filter categories
     if (this.selectedCategory) {
-      filtered = filtered.filter((p) => p.category === this.selectedCategory);
+      filtered = filtered.filter((p) =>
+        p.categoriesId.includes(this.selectedCategory!.id)
+      );
     }
 
+    // Filter search query
     if (this.searchQuery) {
       filtered = filtered.filter((p) =>
         p.name.toLowerCase().includes(this.searchQuery.toLowerCase())
       );
     }
 
-    return filtered.sort((a, b) => {
+    // Sorting - use slice() to avoid mutating the original array in a derivation
+    return filtered.slice().sort((a, b) => {
       switch (this.sortBy) {
         case "price-asc":
           return a.price - b.price;
@@ -64,7 +123,24 @@ export class ProductStore {
     });
   }
 
+  /**
+   * Get all categories
+   */
   get categories() {
-    return [...new Set(this.products.map((p) => p.category))];
+    return allCategories;
+  }
+
+  /**
+   * Get product count
+   */
+  get productCount() {
+    return this.filteredProducts.length;
+  }
+
+  /**
+   * Get active filters
+   */
+  get hasActiveFilters() {
+    return this.selectedCategory !== undefined || this.searchQuery !== "";
   }
 }

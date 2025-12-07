@@ -1,19 +1,39 @@
 import { useTranslation } from "react-i18next";
 import Button from "@/components/ui/button";
-import { Globe } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
 
 export function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "cs" : "en";
-    i18n.changeLanguage(newLang);
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
   };
 
+  const currentFlag =
+    i18n.language === "en" ? "/icons/en-flag.svg" : "/icons/cz-flag.svg";
+
   return (
-    <Button variant="ghost" size="icon" onClick={toggleLanguage}>
-      <Globe className="h-5 w-5" />
-      <span className="ml-2">{i18n.language.toUpperCase()}</span>
-    </Button>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="icon">
+          <img src={currentFlag} alt={i18n.language} width={20} height={20} />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <DropdownMenuItem onClick={() => changeLanguage("en")}>
+          <img src="/icons/en-flag.svg" alt="English" width={20} height={20} />
+          <span className="ml-2">English</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => changeLanguage("cs")}>
+          <img src="/icons/cz-flag.svg" alt="Česky" width={20} height={20} />
+          <span className="ml-2">Česky</span>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }

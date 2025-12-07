@@ -1,5 +1,5 @@
 const TypographySmall = ({ children }: { children: React.ReactNode }) => {
-  return <h1 className="text-sm leading-none font-medium">{children}</h1>;
+  return <small className="text-sm leading-none font-medium">{children}</small>;
 };
 
 export default TypographySmall;
