@@ -23,7 +23,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const price = Number(translate(product.price)) || 0;
 
   return (
-    <Card className="w-full text-center p-2 sm:p-3 hover:border-primary relative flex flex-col h-full">
+    <Card className="w-full text-center p-2 sm:p-3 hover:border-primary relative flex flex-col h-full transition-all duration-300 ease-in-out">
       <Link to={`${URL_ENDPOINTS.PRODUCTS}/${product.id}`}>
         <span className="absolute inset-0"></span>
         <CardHeader className="items-center p-2 sm:p-4">

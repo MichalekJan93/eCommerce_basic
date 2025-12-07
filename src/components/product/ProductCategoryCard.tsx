@@ -10,7 +10,7 @@ interface ProductCategoryCardProps {
 
 const ProductCategoryCard = ({ category }: ProductCategoryCardProps) => {
   return (
-    <Card className="shrink-0 text-left p-2 sm:p-3 hover:border-primary relative flex items-center min-w-[120px] sm:min-w-[180px]">
+    <Card className="shrink-0 text-left p-2 sm:p-3 hover:border-primary relative flex items-center min-w-[120px] sm:min-w-[180px] transition-all duration-300 ease-in-out">
       <Link to={`${URL_ENDPOINTS.PRODUCTS}?category=${category.id}`}>
         <span className="absolute inset-0"></span>
         <div className="flex items-center gap-2 sm:gap-4 justify-center">
