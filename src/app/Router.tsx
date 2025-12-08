@@ -5,6 +5,7 @@ import ProductsPage from "@/pages/ProductsPage";
 import ProductsPageWrapper from "@/pages/ProductsPageWrapper";
 import CartPage from "@/pages/CartPage";
 import CheckoutPage from "@/pages/CheckoutPage";
+import InfoPage from "@/pages/InfoPage";
 import NotFoundPage from "@/pages/NotFoundPage";
 
 export const URL_ENDPOINTS = {
@@ -12,6 +13,7 @@ export const URL_ENDPOINTS = {
   PRODUCTS: "/products",
   CART: "/cart",
   CHECKOUT: "/checkout",
+  INFO: "/info",
 };
 
 const router = createBrowserRouter([
@@ -42,6 +44,11 @@ const router = createBrowserRouter([
         path: URL_ENDPOINTS.CHECKOUT,
         element: <CheckoutPage />,
         handle: { title: "Checkout" },
+      },
+      {
+        path: URL_ENDPOINTS.INFO,
+        element: <InfoPage />,
+        handle: { title: "Info" },
       },
       {
         path: "*",
