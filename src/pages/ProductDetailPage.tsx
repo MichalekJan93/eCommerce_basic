@@ -62,8 +62,6 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
   return (
     <div className="py-4 sm:py-6 lg:py-8">
       <BreadcrumbCustomSeparator />
-
-      {/* Product name - visible only on mobile, above image */}
       <div className="lg:hidden mb-4">
         <Typography type="muted" className="text-sm">
           {product.brand}
@@ -87,13 +85,9 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
           </Typography>
         </div>
       </div>
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
-        {/* Left column - Gallery & Specs */}
         <div className="space-y-4 lg:space-y-6">
           <ProductGallery images={product.images} alt={product.name} />
-
-          {/* Specs - hidden on mobile, shown below gallery on desktop */}
           <Card className="hidden sm:block">
             <CardContent className="p-4 sm:p-6">
               <Typography type="H4" intlId="products:detail.specifications" />
@@ -115,10 +109,7 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
             </CardContent>
           </Card>
         </div>
-
-        {/* Right column - Product info */}
         <div className="space-y-4 sm:space-y-5 lg:space-y-6">
-          {/* Product name - hidden on mobile, shown on desktop */}
           <div className="hidden lg:block">
             <Typography type="muted">{product.brand}</Typography>
             <Typography type="H2" intlId={product.nameIntlId} />
@@ -140,13 +131,9 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
               </Typography>
             </div>
           </div>
-
-          {/* Price */}
           <div>
             <Typography type="H2">{formattedPrice}</Typography>
           </div>
-
-          {/* Stock */}
           <div className="flex items-center gap-2">
             {product.stock > 0 ? (
               <>
@@ -162,30 +149,23 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
               </Typography>
             )}
           </div>
-
-          {/* Short description */}
           <div>
             <Typography type="p" intlId={product.shortDescription} />
           </div>
-
-          {/* Color Variants */}
           {variants.length > 0 && (
             <div className="space-y-2">
               <Typography type="small" intlId="products:detail.variants" />
               <div className="flex flex-wrap gap-2">
-                {/* Current product color */}
                 <div
                   className="w-8 h-8 rounded-full border-2 border-primary"
                   style={{ backgroundColor: product.color }}
                   title={translate(product.colorIntlId)}
                 />
-                {/* Variant colors */}
                 {variants.map((variant) => {
                   const segments = getProductPathSegments(variant!);
                   const variantUrl = `${URL_ENDPOINTS.PRODUCTS}/${segments.join(
                     "/"
                   )}`;
-
                   return (
                     <Link key={variant!.id} to={variantUrl}>
                       <div
@@ -199,8 +179,6 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
               </div>
             </div>
           )}
-
-          {/* Add to cart button */}
           <Button
             size="lg"
             className="w-full sm:w-auto flex items-center justify-center"
@@ -212,16 +190,12 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
               {translate("products:detail.add_to_cart")}
             </Typography>
           </Button>
-
-          {/* Long Description */}
           <div className="pt-2 sm:pt-4">
             <Typography type="H4" intlId="products:detail.description" />
             <div className="mt-2">
               <Typography type="p" intlId={product.longDescription} />
             </div>
           </div>
-
-          {/* Specs - visible only on mobile */}
           <Card className="sm:hidden">
             <CardContent className="p-4">
               <Typography type="H4" intlId="products:detail.specifications" />
@@ -244,8 +218,6 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
           </Card>
         </div>
       </div>
-
-      {/* Similar products */}
       <div className="mt-8 sm:mt-10 lg:mt-12 flex flex-col gap-4">
         <Typography type="H4" intlId="products:detail.similar_products" />
         <ProductCarouselGallery data={productStore.products} />

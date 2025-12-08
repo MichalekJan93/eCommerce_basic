@@ -24,7 +24,6 @@ const BreadcrumbCustomSeparator = () => {
   const productStore = useProductStore();
   const translate = useTranslate();
 
-  // Parse the wildcard path
   const pathSegments = useMemo(() => {
     if (!wildcardPath) return [];
     return wildcardPath.split("/").filter(Boolean);
@@ -36,7 +35,6 @@ const BreadcrumbCustomSeparator = () => {
 
   const items: { label: string; to?: string }[] = [];
 
-  // Home
   const isHome = location.pathname === URL_ENDPOINTS.HOME;
   items.push({ label: "Home", to: isHome ? undefined : URL_ENDPOINTS.HOME });
 
@@ -48,7 +46,6 @@ const BreadcrumbCustomSeparator = () => {
     items.push({ label: "Checkout" });
   } else if (location.pathname.startsWith(URL_ENDPOINTS.PRODUCTS)) {
     if (parsedPath.type === "product" && parsedPath.productSlug) {
-      // Product detail page
       const product = productStore.products.find(
         (p) => slugify(p.name) === parsedPath.productSlug
       );
@@ -73,19 +70,15 @@ const BreadcrumbCustomSeparator = () => {
         items.push({ label: "Product" });
       }
     } else if (parsedPath.categorySegments.length > 0) {
-      // Category page - build breadcrumb from path segments
       const category = productStore.selectedCategory;
 
       if (category) {
-        // Build breadcrumb from the actual category path in store
         if (productStore.selectedCategory) {
-          // Get the path to current category
           const currentCatPath = getCategoryFullPathSegments(
             productStore.selectedCategory.id
           );
 
           if (currentCatPath) {
-            // Build accumulated path for each segment
             let accumulatedSegments: string[] = [];
 
             currentCatPath.forEach((segment, index) => {
