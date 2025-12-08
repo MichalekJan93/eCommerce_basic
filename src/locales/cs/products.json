@@ -74,51 +74,61 @@
   "product": {
     "iphone_17_pro_white": {
       "name": "iPhone 17 Pro White",
-      "short_description": "Výkonný iPhone s titanovým rámem a čipem A17 Pro.",
-      "long_description": "iPhone 17 Pro. Vůbec nejvýkonnější iPhone. Brilantní 6,3palcový displej, hliníková unibody konstrukce, čip A19 Pro, rozlišení 48Mpx u všech zadních fotoaparátů a vůbec nejdelší výdrž baterie.",
+      "short_description": "Prémiový iPhone 17 Pro v elegantní bílé titanové variantě nabízí mimořádný výkon s čipem A19 Pro, špičkovou odolnost a novou generaci fotografických funkcí. Je navržen pro náročné uživatele, kteří požadují maximální rychlost, vynikající displej a celodenní výdrž baterie v kombinaci s luxusním provedením.",
+      "long_description": "iPhone 17 Pro White představuje technologický vrchol současného mobilního průmyslu. Je vybaven brilantním 6,3palcovým ProMotion displejem s vysokým jasem a mimořádnou barevnou přesností, který poskytuje perfektní čitelnost za všech podmínek. Titanový rám v elegantní bílé povrchové úpravě zajišťuje špičkovou pevnost a luxusní vzhled, zatímco unibody konstrukce přináší maximální odolnost vůči každodennímu používání. Srdcem telefonu je extrémně výkonný čip A19 Pro, navržený pro nejnáročnější hry, pokročilou práci s videem a umělou inteligencí. Fotografická soustava se třemi 48Mpx senzory poskytuje profesionální snímky za jakýchkoliv světelných podmínek. Ultraširokoúhlý, širokoúhlý i teleobjektiv přinášejí další generaci detailů, dynamického rozsahu a noční fotografie. iPhone 17 Pro nabízí také nejdelší výdrž baterie v historii řady Pro, rychlé nabíjení přes USB-C, nejmodernější zabezpečení Face ID a nejnovější verzi systému iOS s podporou pokročilých AI funkcí.",
       "color": "Bílý titán",
       "currency": "CZK",
       "price": 34990
     },
     "iphone_17_pro_orange": {
       "name": "iPhone 17 Pro Orange",
-      "short_description": "Výkonný iPhone s oranžovým rámem a čipem A17 Pro.",
-      "long_description": "iPhone 17 Pro. Vůbec nejvýkonnější iPhone. Brilantní 6,3palcový displej, hliníková unibody konstrukce, čip A19 Pro, rozlišení 48Mpx u všech zadních fotoaparátů a vůbec nejdelší výdrž baterie.",
+      "short_description": "Designová oranžová varianta iPhonu 17 Pro kombinuje špičkový titanový rám s extrémním výkonem čipu A19 Pro, dokonale jasným 6,3\" displejem a pokročilou soustavou 48Mpx fotoaparátů. Prémiový smartphone pro ty, kteří chtějí nejen maximální výkon, ale i výrazný styl.",
+      "long_description": "iPhone 17 Pro Orange zaujme na první pohled unikátním titanovým rámem s výrazným oranžovým povrchem, který dodává zařízení moderní a nezaměnitelný vzhled. Prémiová konstrukce unibody zaručuje vysokou odolnost, pevnost a zároveň mimořádně nízkou hmotnost. Displej o velikosti 6,3 palce nabízí špičkovou ostrost, vysoký kontrast a technologie ProMotion zajišťuje plynulé zobrazení při práci, hraní her i prohlížení obsahu. Uvnitř tepe nejpokročilejší čip Apple A19 Pro, vytvořený pro extrémní výkon, pokročilou grafiku a bleskové zpracování dat i při multitaskingu nebo editaci videa. Soustava tří 48Mpx fotoaparátů poskytuje profesionální výsledky s výjimečným zachycením detailů i za horších světelných podmínek. Podporuje optický zoom, filmové režimy, pokročilé portréty i inteligentní zpracování obrazu. Výdrž baterie překonává všechny předchozí generace, zatímco USB-C konektor, rychlonabíjení a robustní zabezpečení doplňují očekávaný komfort špičkového modelu Pro.",
       "color": "Oranžový titán",
       "currency": "CZK",
       "price": 34990
     },
     "iphone_16_pro_titanium": {
       "name": "iPhone 16 Pro Titanium",
-      "short_description": "Výkonný iPhone s titanovým rámem a čipem A16 Pro.",
-      "long_description": "iPhone 16 Pro přináší titanovou konstrukci, čip A16 Pro, Action Button a USB-C.",
+      "short_description": "Elegantní iPhone 16 Pro s titanovým tělem nabízí vysoký výkon díky čipu A16 Pro, prémiovou odolnost, plynulé ovládání a vylepšený kamerový systém. Ideální volba pro uživatele hledající vyvážený poměr výkonu, technologie a moderního designu.",
+      "long_description": "iPhone 16 Pro Titanium spojuje výjimečnou odolnost titanového rámu s moderními technologiemi navrženými pro každodenní profesionální i osobní využití. Čip A16 Pro poskytuje rychlé reakce v aplikacích, efektivní multitasking a spolehlivý výkon při hraní her či práci s multimédii. Zařízení nabízí jasný a přesný displej s podporou ProMotion, který zaručuje plynulý pohyb a realistické barvy. Integrovaný Action Button přidává možnost rychlého přístupu k nejpoužívanějším funkcím a USB-C port zlepšuje kompatibilitu zařízení s moderním příslušenstvím. Vylepšený kamerový systém poskytuje ostré snímky a kvalitní videa ve vysokém dynamickém rozsahu. Telefon je navržen tak, aby poskytoval špičkový výkon v kompaktní a elegantní konstrukci, která odolá náročnému používání.",
       "color": "Titán",
       "currency": "CZK",
       "price": 27990
     },
     "iphone_16_pro_white": {
       "name": "iPhone 16 Pro White",
-      "short_description": "Výkonný iPhone s bílým rámem a čipem A16 Pro.",
-      "long_description": "iPhone 16 Pro přináší titanovou konstrukci, čip A16 Pro, Action Button a USB-C.",
+      "short_description": "Stylová bílá verze iPhonu 16 Pro kombinuje titanovou konstrukci, výkonný čip A16 Pro, pokročilé fotoaparáty a moderní prvky, jako je Action Button a USB-C. Skvělá volba pro uživatele, kteří chtějí vysoký výkon v elegantním provedení.",
+      "long_description": "iPhone 16 Pro White spojuje ikonické bílé provedení s odolným titanovým rámem, který přináší vysokou pevnost při současném zachování nízké hmotnosti. Výkonný čip A16 Pro se stará o rychlou odezvu aplikací, intuitivní ovládání a bezproblémový multitasking. Zařízení disponuje kvalitním displejem s přesným podáním barev a plynulou frekvencí. Prostřednictvím Action Button lze snadno spouštět oblíbené funkce, jako je kamera, poznámky či režimy soustředění. USB-C port zajišťuje rychlejší přenosy dat i připojení široké škály příslušenství. Pokročilý fotoaparát poskytuje detailní snímky, ostré portréty a kvalitní videa za všech podmínek. iPhone 16 Pro White je spolehlivé zařízení, které nabízí kombinaci výkonu, stylu a moderních funkcí pro každodenní použití.",
       "color": "Bílý",
       "currency": "CZK",
       "price": 27990
     },
     "iphone_15_pro_black": {
       "name": "iPhone 15 Pro Black",
-      "short_description": "Výkonný iPhone s černým rámem a čipem A15 Pro.",
-      "long_description": "iPhone 15 Pro přináší titanovou konstrukci, čip A15 Pro, Action Button a USB-C.",
+      "short_description": "Černý iPhone 15 Pro přináší vysoký výkon čipu A15 Pro, titanovou konstrukci, moderní ovládací prvky a USB-C konektor. Nabízí špičkový mobilní zážitek pro uživatele hledající kvalitu a dlouhou životnost zařízení.",
+      "long_description": "iPhone 15 Pro Black je elegantní zařízení s titanovým tělem, které poskytuje odolnost, nízkou hmotnost a prémiový vzhled. Čip A15 Pro umožňuje rychlé zpracování dat, hladký chod aplikací a solidní výkon při hraní her. Kvalitní displej nabízí vysoký jas a věrné barvy, zatímco Action Button umožňuje rychlé zahájení oblíbených funkcí. Změna na USB-C port přináší rychlejší nabíjení a širší kompatibilitu. Fotoaparát poskytuje dobré výsledky při fotografování i natáčení videí, se zaměřením na přesnost barev a solidní detail. Tento model je ideální volbou pro uživatele, kteří chtějí moderní technologie za dostupnější cenu v rámci řady Pro.",
       "color": "Černý",
       "currency": "CZK",
       "price": 24990
     },
     "iphone_15_pro_white": {
       "name": "iPhone 15 Pro White",
-      "short_description": "Výkonný iPhone s bílým rámem a čipem A15 Pro.",
-      "long_description": "iPhone 15 Pro přináší titanovou konstrukci, čip A15 Pro, Action Button a USB-C.",
+      "short_description": "Bílá varianta iPhonu 15 Pro nabízí kombinaci titanové odolnosti, rychlého čipu A15 Pro, intuitivního ovládání a kvalitního fotoaparátu. Přináší spolehlivý výkon a elegantní design pro každodenní použití.",
+      "long_description": "iPhone 15 Pro White spojuje elegantní bílou povrchovou úpravu s moderní titanovou konstrukcí, která je pevná a současně lehká. Výkonný čip A15 Pro poskytuje svižné reakce, plynulý chod systému i aplikací a slušný výkon v graficky náročných scénářích. Displej telefonu nabízí ostré barvy, dobrou čitelnost na slunci a plynulé zobrazení. USB-C port zlepšuje kompatibilitu a efektivitu nabíjení, zatímco univerzální Action Button přináší flexibilní ovládání. Kvalitní fotoaparát zachycuje živé, ostré snímky a videa, ideální pro každodenní fotografování. Tento model poskytuje vyvážený poměr výkonu, stylu a ceny, díky čemuž je vhodný pro širokou škálu uživatelů.",
       "color": "Bílý",
       "currency": "CZK",
       "price": 24990
     }
+  },
+  "detail": {
+    "description": "Popis",
+    "specifications": "Specifikace",
+    "similar_products": "Podobné produkty",
+    "variants": "Varianty",
+    "pieces": "ks",
+    "in_stock": "Skladem",
+    "out_of_stock": "Není skladem",
+    "add_to_cart": "Přidat do košíku"
   }
 }

@@ -14,27 +14,25 @@ interface IProductCarouselGallery {
 
 const ProductCarouselGallery = ({ data }: IProductCarouselGallery) => {
   return (
-    <div className="w-full p-6 flex justify-center">
+    <div className="w-full px-8 sm:px-12 flex justify-center">
       <Carousel
         opts={{
           align: "start",
         }}
-        className="w-full max-w-sm"
+        className="w-full"
       >
-        <CarouselContent>
+        <CarouselContent className="-ml-2 sm:-ml-4">
           {data.map((product) => (
             <CarouselItem
               key={product.id}
-              className="md:basis-1/2 lg:basis-1/3"
+              className="pl-2 sm:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
             >
-              <div className="p-1">
-                <ProductCard product={product} />
-              </div>
+              <ProductCard product={product} />
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="-left-6 sm:-left-10" />
+        <CarouselNext className="-right-6 sm:-right-10" />
       </Carousel>
     </div>
   );

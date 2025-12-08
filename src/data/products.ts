@@ -98,7 +98,7 @@ export const products: Product[] = [
     currency: "products:product.iphone_16_pro_white.currency",
     images: [
       "/products/iphone-16-pro/white/iphone-16-pro-front.webp",
-      "/products/iphone-16-pro/white/iphone-16-pro-detail.webp",
+      "/products/iphone-16-pro/white/iphone-16-pro-detail.png",
       "/products/iphone-16-pro/white/iphone-16-pro-back.webp",
     ],
     shortDescription: "products:product.iphone_16_pro_white.short_description",

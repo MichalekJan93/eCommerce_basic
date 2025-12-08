@@ -74,51 +74,61 @@
   "product": {
     "iphone_17_pro_white": {
       "name": "iPhone 17 Pro White",
-      "short_description": "The most powerful iPhone ever with a white frame and A17 Pro chip.",
-      "long_description": "iPhone 17 Pro. The most powerful iPhone ever. 6.3'' Super Retina XDR display, titanium unibody, A17 Pro chip, 48MP resolution on all rear cameras and the longest battery life ever.",
+      "short_description": "A premium edition of the iPhone 17 Pro featuring an elegant white titanium frame, the ultra-powerful A19 Pro chip, next-generation photography capabilities, and exceptional all-day battery life. Designed for users who demand top-tier performance, superb display quality, and a refined, luxurious build.",
+      "long_description": "The iPhone 17 Pro White represents the pinnacle of modern smartphone engineering. Equipped with a brilliant 6.3'' ProMotion Super Retina XDR display, it delivers exceptional brightness, perfect color accuracy, and outstanding readability in any lighting conditions. Its white titanium unibody frame provides superior durability, premium aesthetics, and remarkable structural integrity. Powered by the ultra-fast A19 Pro chip, it handles demanding gaming, advanced video workflows, and powerful AI-driven tasks with ease. The triple 48MP camera system captures stunning detail with cutting-edge sensors across ultra-wide, wide, and telephoto lenses, delivering industry-leading low-light performance and cinematic image quality. The device also offers the longest battery life ever in a Pro model, rapid USB-C charging, advanced Face ID security, and the latest iOS enhanced with intelligent AI features.",
       "color": "White Titanium",
       "currency": "EUR",
       "price": 1299
     },
     "iphone_17_pro_orange": {
       "name": "iPhone 17 Pro Orange",
-      "short_description": "The most powerful iPhone ever with an orange frame and A17 Pro chip.",
-      "long_description": "iPhone 17 Pro. The most powerful iPhone ever. 6.3'' Super Retina XDR display, titanium unibody, A17 Pro chip, 48MP resolution on all rear cameras and the longest battery life ever.",
+      "short_description": "A striking orange titanium edition of the iPhone 17 Pro, combining bold design with the extraordinary power of the A19 Pro chip, a brilliant 6.3'' display, and cutting-edge 48MP camera technology. Perfect for users who want top performance with a distinctive visual identity.",
+      "long_description": "The iPhone 17 Pro Orange stands out with its unique orange titanium frame, crafted for strength, lightness, and unmistakable modern style. Its seamless unibody design ensures exceptional durability while maintaining an ultra-premium feel. The 6.3'' Super Retina XDR ProMotion display delivers vivid color reproduction, high contrast, and ultra-smooth motion for gaming, media, and professional workflows. Inside, the A19 Pro chip provides top-tier performance, enabling advanced multitasking, console-grade graphics, and lightning-fast data processing. The professional 48MP triple-camera system delivers stunning clarity with superior night mode capabilities, optical zoom, cinematic video modes, and intelligent computational photography. With industry-leading battery life, USB-C fast charging, and advanced privacy protection, this model offers a complete flagship experience tailored for performance-driven and style-oriented users.",
       "color": "Orange Titanium",
       "currency": "EUR",
       "price": 1299
     },
     "iphone_16_pro_titanium": {
       "name": "iPhone 16 Pro Titanium",
-      "short_description": "The most powerful iPhone ever with a titanium frame and A16 Pro chip.",
-      "long_description": "iPhone 16 Pro. The most powerful iPhone ever. 6.3'' Super Retina XDR display, titanium unibody, A16 Pro chip, 48MP resolution on all rear cameras and the longest battery life ever.",
+      "short_description": "A refined titanium version of the iPhone 16 Pro, offering impressive performance with the A16 Pro chip, a dynamic display, advanced camera technology, and premium durability. Ideal for users seeking a balanced flagship experience.",
+      "long_description": "The iPhone 16 Pro Titanium combines premium build quality with advanced mobile technology. Its ultra-light yet durable titanium frame ensures excellent strength and a premium hand feel. The A16 Pro chip provides efficient performance across demanding apps, games, and multitasking environments. The Super Retina XDR display offers brilliant clarity, smooth motion thanks to ProMotion technology, and superb color accuracy. The enhanced camera system captures sharp photos, detailed portraits, and high-quality video even in challenging lighting. With the customizable Action Button for quick access to essential tools and a USB-C port for faster connectivity and charging, the iPhone 16 Pro Titanium delivers a truly modern, reliable, and efficient flagship experience.",
       "color": "Titanium",
       "currency": "EUR",
       "price": 1099
     },
     "iphone_16_pro_white": {
       "name": "iPhone 16 Pro White",
-      "short_description": "The most powerful iPhone ever with a white frame and A16 Pro chip.",
-      "long_description": "iPhone 16 Pro. The most powerful iPhone ever. 6.3'' Super Retina XDR display, titanium unibody, A16 Pro chip, 48MP resolution on all rear cameras and the longest battery life ever.",
+      "short_description": "A premium white edition of the iPhone 16 Pro, featuring a durable titanium frame, the powerful A16 Pro chip, advanced photography systems, and the convenience of the Action Button and USB-C connectivity.",
+      "long_description": "The iPhone 16 Pro White unites elegant white styling with the strength and lightweight feel of a titanium frame. Powered by the responsive A16 Pro chip, it ensures smooth performance in daily tasks, content creation, and multitasking. The Super Retina XDR display delivers crisp visuals, vivid colors, and fluid motion thanks to ProMotion support. The customizable Action Button offers quick access to frequently used features such as camera, notes, and focus modes. With its USB-C port, the device supports fast charging and broad accessory compatibility. The improved camera setup delivers detailed photos, clean portraits, and excellent video quality, making the iPhone 16 Pro White a strong choice for users who value performance, style, and versatility.",
       "color": "White",
       "currency": "EUR",
       "price": 1099
     },
     "iphone_15_pro_black": {
       "name": "iPhone 15 Pro Black",
-      "short_description": "The most powerful iPhone ever with a black frame and A15 Pro chip.",
-      "long_description": "iPhone 15 Pro. The most powerful iPhone ever. 6.3'' Super Retina XDR display, titanium unibody, A15 Pro chip, 48MP resolution on all rear cameras and the longest battery life ever.",
+      "short_description": "A sleek black titanium edition of the iPhone 15 Pro, powered by the efficient A15 Pro chip, offering high performance, strong durability, and modern features including USB-C and the Action Button.",
+      "long_description": "The iPhone 15 Pro Black delivers a premium experience with its lightweight titanium build that combines durability and elegant dark styling. The A15 Pro chip ensures quick app loading, smooth system navigation, and solid performance for gaming and multimedia tasks. The Super Retina XDR display offers high brightness and vibrant colors, while the versatile Action Button enables streamlined access to essential tools. With USB-C, users benefit from faster charging and improved connectivity options. The upgraded camera system captures sharp images and balanced video content, focusing on color accuracy and clarity. This model is an excellent choice for users seeking a modern, reliable iPhone at a more accessible price point.",
       "color": "Black",
       "currency": "EUR",
       "price": 899
     },
     "iphone_15_pro_white": {
       "name": "iPhone 15 Pro White",
-      "short_description": "The most powerful iPhone ever with a white frame and A15 Pro chip.",
-      "long_description": "iPhone 15 Pro. The most powerful iPhone ever. 6.3'' Super Retina XDR display, titanium unibody, A15 Pro chip, 48MP resolution on all rear cameras and the longest battery life ever.",
+      "short_description": "A refined white titanium edition of the iPhone 15 Pro, equipped with the A15 Pro chip, a high-quality display, advanced camera features, and the convenience of USB-C.",
+      "long_description": "The iPhone 15 Pro White merges a clean, elegant design with the resilience of a lightweight titanium frame. The A15 Pro chip enables responsive system performance, fluid app interactions, and reliable graphics handling. Its Super Retina XDR display ensures sharp visuals and strong outdoor visibility. Featuring USB-C support for efficient charging and data transfers, as well as the flexible Action Button for quick feature access, this model enhances everyday usability. The advanced camera system delivers vivid photos and detailed video, making it ideal for capturing daily moments with clarity. The iPhone 15 Pro White is a well-balanced device offering strong value, dependable performance, and a sophisticated aesthetic.",
       "color": "White",
       "currency": "EUR",
       "price": 899
     }
+  },
+  "detail": {
+    "description": "Description",
+    "specifications": "Specifications",
+    "similar_products": "Similar products",
+    "variants": "Variants",
+    "pieces": "pcs",
+    "in_stock": "In stock",
+    "out_of_stock": "Out of stock",
+    "add_to_cart": "Add to cart"
   }
 }

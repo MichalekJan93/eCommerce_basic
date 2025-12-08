@@ -23,6 +23,7 @@ interface ITypography {
   intlId?: string;
   intlParams?: Record<string, string>;
   children?: React.ReactNode;
+  className?: string;
 }
 
 const componentMap: Record<
@@ -44,6 +45,7 @@ const Typography = ({
   intlId,
   intlParams,
   children,
+  ...props
 }: ITypography) => {
   const { t } = useTranslation();
 
@@ -51,7 +53,7 @@ const Typography = ({
 
   const Component = componentMap[type];
 
-  return <Component>{content}</Component>;
+  return <Component {...props}>{content}</Component>;
 };
 
 export default Typography;

@@ -6,7 +6,7 @@ interface IProductCarousel {
   data: Product[];
 }
 
-const ProductCarousel = observer((props: IProductCarousel) => {
+const ProductCards = observer((props: IProductCarousel) => {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
       {props.data.map((product) => (
@@ -16,4 +16,4 @@ const ProductCarousel = observer((props: IProductCarousel) => {
   );
 });
 
-export default ProductCarousel;
+export default ProductCards;

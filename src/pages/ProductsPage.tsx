@@ -1,12 +1,17 @@
 import Typography from "@/components/basic/typography/Typography";
 import ProductCategoryCard from "@/components/product/ProductCategoryCard";
-import ProductCarousel from "@/components/product/ProductCarousel";
+import ProductCards from "@/components/product/ProductCards";
 import ProductDetailPage from "@/pages/ProductDetailPage";
 import { useProductStore } from "@/hooks/useStore";
 import { observer } from "mobx-react-lite";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import { useSearchParams, useParams } from "react-router-dom";
 import { getCategoryIdByFullPath, parseProductsPath } from "@/utils/catalog";
+
+function getPathSegments(wildcardPath: string | undefined) {
+  if (!wildcardPath) return [];
+  return wildcardPath.split("/").filter(Boolean);
+}
 
 const ProductsPage = observer(() => {
   const [searchParams] = useSearchParams();
@@ -14,16 +19,8 @@ const ProductsPage = observer(() => {
   const categoryIdParam = searchParams.get("category");
   const productStore = useProductStore();
 
-  // Parse the wildcard path into segments
-  const pathSegments = useMemo(() => {
-    if (!wildcardPath) return [];
-    return wildcardPath.split("/").filter(Boolean);
-  }, [wildcardPath]);
-
-  // Determine if this is a product or category page
-  const parsedPath = useMemo(() => {
-    return parseProductsPath(pathSegments, productStore.products);
-  }, [pathSegments, productStore.products]);
+  const pathSegments = getPathSegments(wildcardPath);
+  const parsedPath = parseProductsPath(pathSegments, productStore.products);
 
   useEffect(() => {
     let effectiveCategoryId: string | null = categoryIdParam;
@@ -37,12 +34,10 @@ const ProductsPage = observer(() => {
     productStore.setCategory(effectiveCategoryId);
   }, [categoryIdParam, parsedPath.categorySegments, productStore]);
 
-  // If this is a product page, render ProductDetailPage
   if (parsedPath.type === "product" && parsedPath.productSlug) {
     return <ProductDetailPage productSlug={parsedPath.productSlug} />;
   }
 
-  // Otherwise render category listing
   return (
     <>
       <div className="py-8">
@@ -64,7 +59,7 @@ const ProductsPage = observer(() => {
           </div>
         )}
       </div>
-      <ProductCarousel data={productStore.filteredProducts} />
+      <ProductCards data={productStore.filteredProducts} />
     </>
   );
 });

@@ -10,18 +10,16 @@ import { Link } from "react-router-dom";
 import Button from "../ui/button";
 import { ShoppingBag } from "lucide-react";
 import Typography from "../basic/typography/Typography";
-import { useTranslate } from "@/utils/translate";
 import { URL_ENDPOINTS } from "@/app/Router";
 import { getProductPathSegments } from "@/utils/catalog";
+import { getFormattedPrice } from "@/utils/price";
 
 export interface ProductCardProps {
   product: Product;
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
-  const translate = useTranslate();
-
-  const price = Number(translate(product.price)) || 0;
+  const formattedPrice = getFormattedPrice(product.price);
 
   const segments = getProductPathSegments(product);
   const productUrl = `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}`;
@@ -46,9 +44,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <Typography type="muted" intlId={product.shortDescription} />
         </CardDescription>
         <div className="flex gap-2 sm:gap-5 font-bold justify-center mt-3 sm:mt-4 text-sm sm:text-base">
-          <Typography type="p">
-            {`${price} ${translate(product.currency)}`}
-          </Typography>
+          <Typography type="p">{formattedPrice}</Typography>
         </div>
       </CardContent>
       <Button

@@ -3,7 +3,7 @@ import Button from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useCartStore, useProductStore } from "@/hooks/useStore";
 import { useTranslate } from "@/utils/translate";
-import { getLocalizedPrice } from "@/utils/price";
+import { getLocalizedPrice, formatPrice } from "@/utils/price";
 import { useNavigate, Link } from "react-router-dom";
 import { ShoppingBag, Star, ArrowLeft, Check } from "lucide-react";
 import { URL_ENDPOINTS } from "@/app/Router";
@@ -44,7 +44,7 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
   }
 
   const price = getLocalizedPrice(product.price);
-  const currency = translate(product.currency);
+  const formattedPrice = formatPrice(price);
 
   const handleAddToCart = () => {
     cartStore.addItem({
@@ -55,50 +55,95 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
     });
   };
 
-  // Get variant products
   const variants = product.variantsId
     .map((variantId) => productStore.products.find((p) => p.id === variantId))
     .filter(Boolean);
 
   return (
-    <div className="py-4 sm:py-8">
+    <div className="py-4 sm:py-6 lg:py-8">
       <BreadcrumbCustomSeparator />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
-        <ProductGallery images={product.images} alt={product.name} />
-        {/* Product Info */}
-        <div className="space-y-6">
-          {/* Brand */}
-          <Typography type="muted">{product.brand}</Typography>
+      {/* Product name - visible only on mobile, above image */}
+      <div className="lg:hidden mb-4">
+        <Typography type="muted" className="text-sm">
+          {product.brand}
+        </Typography>
+        <Typography type="H3" intlId={product.nameIntlId} />
+        <div className="flex items-center gap-2 mt-2">
+          <div className="flex">
+            {[...Array(5)].map((_, i) => (
+              <Star
+                key={i}
+                className={`w-4 h-4 ${
+                  i < Math.floor(product.rating)
+                    ? "fill-yellow-400 text-yellow-400"
+                    : "text-gray-300"
+                }`}
+              />
+            ))}
+          </div>
+          <Typography type="small">
+            {product.rating} ({product.reviewsCount} recenzí)
+          </Typography>
+        </div>
+      </div>
 
-          {/* Name */}
-          <Typography type="H1" intlId={product.nameIntlId} />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
+        {/* Left column - Gallery & Specs */}
+        <div className="space-y-4 lg:space-y-6">
+          <ProductGallery images={product.images} alt={product.name} />
 
-          {/* Rating */}
-          <div className="flex items-center gap-2">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className={`w-4 h-4 sm:w-5 sm:h-5 ${
-                    i < Math.floor(product.rating)
-                      ? "fill-yellow-400 text-yellow-400"
-                      : "text-gray-300"
-                  }`}
-                />
-              ))}
+          {/* Specs - hidden on mobile, shown below gallery on desktop */}
+          <Card className="hidden sm:block">
+            <CardContent className="p-4 sm:p-6">
+              <Typography type="H4" intlId="products:detail.specifications" />
+              <div className="mt-4 space-y-2">
+                {Object.entries(product.specs).map(([key, value]) => (
+                  <div
+                    key={key}
+                    className="flex justify-between py-2 border-b border-border last:border-b-0"
+                  >
+                    <Typography type="muted">
+                      {key.charAt(0).toUpperCase() + key.slice(1)}
+                    </Typography>
+                    <Typography type="p" className="mt-0 text-right">
+                      {String(value)}
+                    </Typography>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Right column - Product info */}
+        <div className="space-y-4 sm:space-y-5 lg:space-y-6">
+          {/* Product name - hidden on mobile, shown on desktop */}
+          <div className="hidden lg:block">
+            <Typography type="muted">{product.brand}</Typography>
+            <Typography type="H2" intlId={product.nameIntlId} />
+            <div className="flex items-center gap-2 mt-2">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className={`w-5 h-5 ${
+                      i < Math.floor(product.rating)
+                        ? "fill-yellow-400 text-yellow-400"
+                        : "text-gray-300"
+                    }`}
+                  />
+                ))}
+              </div>
+              <Typography type="small">
+                {product.rating} ({product.reviewsCount} recenzí)
+              </Typography>
             </div>
-            <Typography type="small">
-              {product.rating} ({product.reviewsCount} recenzí)
-            </Typography>
           </div>
 
-          {/* Short Description */}
-          <Typography type="p" intlId={product.shortDescription} />
-
           {/* Price */}
-          <div className="flex items-baseline gap-2">
-            <Typography type="H2">{`${price} ${currency}`}</Typography>
+          <div>
+            <Typography type="H2">{formattedPrice}</Typography>
           </div>
 
           {/* Stock */}
@@ -107,22 +152,30 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
               <>
                 <Check className="w-5 h-5 text-green-500" />
                 <Typography type="small">
-                  Skladem ({product.stock} ks)
+                  {translate("products:detail.in_stock")} ({product.stock}{" "}
+                  {translate("products:detail.pieces")})
                 </Typography>
               </>
             ) : (
-              <Typography type="muted">Není skladem</Typography>
+              <Typography type="muted">
+                {translate("products:detail.out_of_stock")}
+              </Typography>
             )}
+          </div>
+
+          {/* Short description */}
+          <div>
+            <Typography type="p" intlId={product.shortDescription} />
           </div>
 
           {/* Color Variants */}
           {variants.length > 0 && (
             <div className="space-y-2">
-              <Typography type="small">Barevné varianty:</Typography>
-              <div className="flex gap-2">
+              <Typography type="small" intlId="products:detail.variants" />
+              <div className="flex flex-wrap gap-2">
                 {/* Current product color */}
                 <div
-                  className="w-8 h-8 rounded-full border-2 border-primary ring-2 ring-primary ring-offset-2"
+                  className="w-8 h-8 rounded-full border-2 border-primary"
                   style={{ backgroundColor: product.color }}
                   title={translate(product.colorIntlId)}
                 />
@@ -147,47 +200,56 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
             </div>
           )}
 
-          {/* Add to Cart Button */}
+          {/* Add to cart button */}
           <Button
             size="lg"
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto flex items-center justify-center"
             onClick={handleAddToCart}
             disabled={product.stock === 0}
           >
             <ShoppingBag className="w-5 h-5 mr-2" />
-            <Typography type="p">Přidat do košíku</Typography>
+            <Typography type="p" className="inline mt-0">
+              {translate("products:detail.add_to_cart")}
+            </Typography>
           </Button>
 
-          {/* Specs */}
-          <Card>
-            <CardContent className="p-4 sm:p-6">
-              <Typography type="H4">Specifikace</Typography>
-              <div className="mt-4 space-y-3">
+          {/* Long Description */}
+          <div className="pt-2 sm:pt-4">
+            <Typography type="H4" intlId="products:detail.description" />
+            <div className="mt-2">
+              <Typography type="p" intlId={product.longDescription} />
+            </div>
+          </div>
+
+          {/* Specs - visible only on mobile */}
+          <Card className="sm:hidden">
+            <CardContent className="p-4">
+              <Typography type="H4" intlId="products:detail.specifications" />
+              <div className="mt-3 space-y-2">
                 {Object.entries(product.specs).map(([key, value]) => (
                   <div
                     key={key}
-                    className="flex justify-between py-2 border-b border-border last:border-b-0"
+                    className="flex justify-between py-1.5 border-b border-border last:border-b-0 text-sm"
                   >
                     <Typography type="muted">
                       {key.charAt(0).toUpperCase() + key.slice(1)}
                     </Typography>
-                    <Typography type="p">{String(value)}</Typography>
+                    <Typography type="p" className="mt-0 text-right">
+                      {String(value)}
+                    </Typography>
                   </div>
                 ))}
               </div>
             </CardContent>
           </Card>
-
-          {/* Long Description */}
-          <div className="pt-4">
-            <Typography type="H4">Popis produktu</Typography>
-            <div className="mt-2">
-              <Typography type="p" intlId={product.longDescription} />
-            </div>
-          </div>
         </div>
       </div>
-      <ProductCarouselGallery data={productStore.products} />
+
+      {/* Similar products */}
+      <div className="mt-8 sm:mt-10 lg:mt-12 flex flex-col gap-4">
+        <Typography type="H4" intlId="products:detail.similar_products" />
+        <ProductCarouselGallery data={productStore.products} />
+      </div>
     </div>
   );
 };

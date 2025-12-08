@@ -28,7 +28,6 @@ const router = createBrowserRouter([
         handle: { title: "Products" },
       },
       {
-        // Wildcard route for dynamic category depth and product detail
         path: `${URL_ENDPOINTS.PRODUCTS}/*`,
         element: <ProductsPage />,
         handle: { title: "Products" },
