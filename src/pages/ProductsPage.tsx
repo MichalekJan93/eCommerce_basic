@@ -4,16 +4,31 @@ import ProductCarousel from "@/components/product/ProductCarousel";
 import { useProductStore } from "@/hooks/useStore";
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useParams } from "react-router-dom";
+import { getCategoryIdBySlugSegments } from "@/utils/catalog";
 
 const ProductsPage = observer(() => {
   const [searchParams] = useSearchParams();
+  const { categorySlug, subCategorySlug } = useParams<{
+    categorySlug?: string;
+    subCategorySlug?: string;
+  }>();
   const categoryId = searchParams.get("category");
   const productStore = useProductStore();
 
   useEffect(() => {
-    productStore.setCategory(categoryId);
-  }, [categoryId, productStore]);
+    let effectiveCategoryId: string | null = categoryId;
+
+    if (!effectiveCategoryId) {
+      const slugs = [categorySlug, subCategorySlug].filter(Boolean) as string[];
+
+      if (slugs.length) {
+        effectiveCategoryId = getCategoryIdBySlugSegments(slugs);
+      }
+    }
+
+    productStore.setCategory(effectiveCategoryId);
+  }, [categoryId, categorySlug, subCategorySlug, productStore]);
 
   return (
     <>

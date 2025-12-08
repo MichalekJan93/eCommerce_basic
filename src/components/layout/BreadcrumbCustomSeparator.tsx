@@ -1,5 +1,10 @@
 import { Fragment } from "react";
-import { Link, useLocation } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,45 +13,108 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "../ui/breadcrumb";
+import { URL_ENDPOINTS } from "@/app/Router";
+import { useProductStore } from "@/hooks/useStore";
+import { useTranslate } from "@/utils/translate";
+import {
+  getCategoryPathById,
+  getCategoryPathSegmentsForCategoryId,
+  getProductCategoryPath,
+  getProductSlug,
+} from "@/utils/catalog";
 
 const BreadcrumbCustomSeparator = () => {
   const location = useLocation();
-  const pathnames = location.pathname.split("/").filter(Boolean);
+  const { productSlug } = useParams<{ productSlug?: string }>();
+  const [searchParams] = useSearchParams();
+  const productStore = useProductStore();
+  const translate = useTranslate();
 
-  const hasSegments = pathnames.length > 0;
+  const items: { label: string; to?: string }[] = [];
 
-  const formatSegment = (segment: string) => {
-    const decoded = decodeURIComponent(segment).replace(/-/g, " ");
-    return decoded.charAt(0).toUpperCase() + decoded.slice(1);
-  };
+  // Home
+  const isHome = location.pathname === URL_ENDPOINTS.HOME;
+  items.push({ label: "Home", to: isHome ? undefined : URL_ENDPOINTS.HOME });
+
+  if (isHome) {
+    // jen Home
+  } else if (location.pathname === URL_ENDPOINTS.CART) {
+    items.push({ label: "Cart" });
+  } else if (location.pathname === URL_ENDPOINTS.CHECKOUT) {
+    items.push({ label: "Checkout" });
+  } else if (location.pathname.startsWith(URL_ENDPOINTS.PRODUCTS)) {
+    if (productSlug) {
+      // Product detail page
+      const product = productStore.products.find(
+        (p) => getProductSlug(p) === productSlug
+      );
+
+      if (product) {
+        const categoryPath = getProductCategoryPath(product);
+
+        categoryPath.forEach((category) => {
+          const segments = getCategoryPathSegmentsForCategoryId(category.id);
+          const categoryUrl = segments?.length
+            ? `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}?category=${
+                category.id
+              }`
+            : `${URL_ENDPOINTS.PRODUCTS}?category=${category.id}`;
+
+          items.push({
+            label: translate(category.titleIntlId),
+            to: categoryUrl,
+          });
+        });
+
+        items.push({ label: translate(product.nameIntlId) });
+      } else {
+        items.push({ label: "Product" });
+      }
+    } else {
+      // Products list page
+      const categoryId = searchParams.get("category");
+
+      if (categoryId) {
+        const categoryPath = getCategoryPathById(categoryId);
+
+        if (categoryPath) {
+          categoryPath.forEach((category, index) => {
+            const isLast = index === categoryPath.length - 1;
+
+            const segments = getCategoryPathSegmentsForCategoryId(category.id);
+            const categoryUrl = segments?.length
+              ? `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}?category=${
+                  category.id
+                }`
+              : `${URL_ENDPOINTS.PRODUCTS}?category=${category.id}`;
+
+            items.push({
+              label: translate(category.titleIntlId),
+              to: isLast ? undefined : categoryUrl,
+            });
+          });
+        }
+      } else {
+        items.push({ label: "Products" });
+      }
+    }
+  }
 
   return (
     <Breadcrumb className="mb-4">
       <BreadcrumbList>
-        <BreadcrumbItem>
-          {hasSegments ? (
-            <BreadcrumbLink asChild>
-              <Link to="/">Home</Link>
-            </BreadcrumbLink>
-          ) : (
-            <BreadcrumbPage>Home</BreadcrumbPage>
-          )}
-        </BreadcrumbItem>
-
-        {pathnames.map((segment, index) => {
-          const to = `/${pathnames.slice(0, index + 1).join("/")}`;
-          const isLast = index === pathnames.length - 1;
-          const label = formatSegment(segment);
+        {items.map((item, index) => {
+          const isLast = index === items.length - 1;
 
           return (
-            <Fragment key={to}>
-              <BreadcrumbSeparator>/</BreadcrumbSeparator>
+            <Fragment key={`${item.label}-${index}`}>
+              {index > 0 && <BreadcrumbSeparator>/</BreadcrumbSeparator>}
               <BreadcrumbItem>
-                {isLast ? (
-                  <BreadcrumbPage>{label}</BreadcrumbPage>
+                {isLast || !item.to ? (
+                  <BreadcrumbPage>{item.label}</BreadcrumbPage>
                 ) : (
                   <BreadcrumbLink asChild>
-                    <Link to={to}>{label}</Link>
+                    <Link to={item.to}>{item.label}</Link>
                   </BreadcrumbLink>
                 )}
               </BreadcrumbItem>

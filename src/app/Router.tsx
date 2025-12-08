@@ -29,7 +29,17 @@ const router = createBrowserRouter([
         handle: { title: "Products" },
       },
       {
-        path: `${URL_ENDPOINTS.PRODUCTS}/:id`,
+        path: `${URL_ENDPOINTS.PRODUCTS}/:categorySlug`,
+        element: <ProductsPage />,
+        handle: { title: "Products" },
+      },
+      {
+        path: `${URL_ENDPOINTS.PRODUCTS}/:categorySlug/:subCategorySlug`,
+        element: <ProductsPage />,
+        handle: { title: "Products" },
+      },
+      {
+        path: `${URL_ENDPOINTS.PRODUCTS}/:categorySlug/:subCategorySlug/:productSlug`,
         element: <ProductDetailPage />,
         handle: { title: "Product Detail" },
       },

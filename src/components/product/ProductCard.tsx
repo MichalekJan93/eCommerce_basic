@@ -12,6 +12,7 @@ import { ShoppingBag } from "lucide-react";
 import Typography from "../basic/typography/Typography";
 import { useTranslate } from "@/utils/translate";
 import { URL_ENDPOINTS } from "@/app/Router";
+import { getProductPathSegments } from "@/utils/catalog";
 
 export interface ProductCardProps {
   product: Product;
@@ -22,9 +23,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
   const price = Number(translate(product.price)) || 0;
 
+  const segments = getProductPathSegments(product);
+  const productUrl = `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}`;
+
   return (
     <Card className="w-full text-center p-2 sm:p-3 hover:border-primary relative flex flex-col h-full transition-all duration-300 ease-in-out">
-      <Link to={`${URL_ENDPOINTS.PRODUCTS}/${product.id}`}>
+      <Link to={productUrl}>
         <span className="absolute inset-0"></span>
         <CardHeader className="items-center p-2 sm:p-4">
           <img

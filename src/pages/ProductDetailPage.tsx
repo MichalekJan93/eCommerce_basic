@@ -10,16 +10,19 @@ import { URL_ENDPOINTS } from "@/app/Router";
 import ProductCarouselGallery from "@/components/product/ProductCarouselGallery";
 import ProductGallery from "@/components/product/ProductGallery";
 import BreadcrumbCustomSeparator from "@/components/layout/BreadcrumbCustomSeparator";
+import { getProductPathSegments, getProductSlug } from "@/utils/catalog";
 
 const ProductDetailPage = () => {
-  const { id } = useParams<{ id: string }>();
+  const { productSlug } = useParams<{ productSlug: string }>();
   const navigate = useNavigate();
   const translate = useTranslate();
 
   const productStore = useProductStore();
   const cartStore = useCartStore();
 
-  const product = productStore.products.find((p) => p.id === id);
+  const product = productStore.products.find(
+    (p) => getProductSlug(p) === productSlug
+  );
 
   if (!product) {
     return (
@@ -121,18 +124,22 @@ const ProductDetailPage = () => {
                   title={translate(product.colorIntlId)}
                 />
                 {/* Variant colors */}
-                {variants.map((variant) => (
-                  <Link
-                    key={variant!.id}
-                    to={`${URL_ENDPOINTS.PRODUCTS}/${variant!.id}`}
-                  >
-                    <div
-                      className="w-8 h-8 rounded-full border-2 border-border hover:border-primary cursor-pointer transition-all"
-                      style={{ backgroundColor: variant!.color }}
-                      title={translate(variant!.colorIntlId)}
-                    />
-                  </Link>
-                ))}
+                {variants.map((variant) => {
+                  const segments = getProductPathSegments(variant!);
+                  const variantUrl = `${URL_ENDPOINTS.PRODUCTS}/${segments.join(
+                    "/"
+                  )}`;
+
+                  return (
+                    <Link key={variant!.id} to={variantUrl}>
+                      <div
+                        className="w-8 h-8 rounded-full border-2 border-border hover:border-primary cursor-pointer transition-all"
+                        style={{ backgroundColor: variant!.color }}
+                        title={translate(variant!.colorIntlId)}
+                      />
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           )}

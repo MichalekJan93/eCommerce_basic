@@ -6,6 +6,7 @@ import { useTranslate } from "@/utils/translate";
 import Typography from "../../basic/typography/Typography";
 import type { SubCategory } from "@/types/types";
 import { URL_ENDPOINTS } from "@/app/Router";
+import { getCategoryPathSegmentsForCategoryId } from "@/utils/catalog";
 
 interface MobileMenuItemProps {
   titleIntlId: string;
@@ -39,33 +40,53 @@ const MobileMenuItem = memo(
         >
           <div className="overflow-hidden">
             <div className="flex flex-col gap-3 pl-2">
-              {categories.map((category) => (
-                <div key={category.id}>
-                  <Link
-                    to={`${URL_ENDPOINTS.PRODUCTS}?category=${category.name}`}
-                    className="flex items-center gap-3"
-                  >
-                    <img
-                      src={category.image}
-                      alt=""
-                      className="h-8 w-8 object-contain"
-                    />
-                    <Typography intlId={category.titleIntlId} type="p" />
-                  </Link>
-                  <div className="mt-1 flex flex-wrap gap-2 pl-11">
-                    {category.subCategories &&
-                      category.subCategories.map((category) => (
-                        <Link
-                          key={category.id}
-                          to={`${URL_ENDPOINTS.PRODUCTS}?category=${category.name}`}
-                          className="text-xs text-primary hover:underline"
-                        >
-                          {translate(category.titleIntlId)}
-                        </Link>
-                      ))}
+              {categories.map((category) => {
+                const segments = getCategoryPathSegmentsForCategoryId(
+                  category.id
+                );
+                const categoryUrl = segments?.length
+                  ? `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}?category=${
+                      category.id
+                    }`
+                  : `${URL_ENDPOINTS.PRODUCTS}?category=${category.id}`;
+
+                return (
+                  <div key={category.id}>
+                    <Link to={categoryUrl} className="flex items-center gap-3">
+                      <img
+                        src={category.image}
+                        alt=""
+                        className="h-8 w-8 object-contain"
+                      />
+                      <Typography intlId={category.titleIntlId} type="p" />
+                    </Link>
+                    <div className="mt-1 flex flex-wrap gap-2 pl-11">
+                      {category.subCategories &&
+                        category.subCategories.map((subCategory) => {
+                          const subSegments =
+                            getCategoryPathSegmentsForCategoryId(
+                              subCategory.id
+                            );
+                          const subCategoryUrl = subSegments?.length
+                            ? `${URL_ENDPOINTS.PRODUCTS}/${subSegments.join(
+                                "/"
+                              )}?category=${subCategory.id}`
+                            : `${URL_ENDPOINTS.PRODUCTS}?category=${subCategory.id}`;
+
+                          return (
+                            <Link
+                              key={subCategory.id}
+                              to={subCategoryUrl}
+                              className="text-xs text-primary hover:underline"
+                            >
+                              {translate(subCategory.titleIntlId)}
+                            </Link>
+                          );
+                        })}
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
