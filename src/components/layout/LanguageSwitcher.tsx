@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
-import Button from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
+import Button from "../ui/button";
 
 export function LanguageSwitcher() {
   const { i18n } = useTranslation();

@@ -26,14 +26,14 @@ const MobileMenuItem = memo(
           {translate(titleIntlId)}
           <ChevronDown
             className={cn(
-              "h-4 w-4 transition-transform duration-200",
+              "h-4 w-4 transition-transform duration-300",
               isOpen && "rotate-180"
             )}
           />
         </button>
         <div
           className={cn(
-            "grid transition-all duration-200",
+            "grid transition-all duration-300",
             isOpen ? "grid-rows-[1fr] pb-3" : "grid-rows-[0fr]"
           )}
         >

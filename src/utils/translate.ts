@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 
 /**
@@ -7,10 +8,12 @@ import { useTranslation } from "react-i18next";
 export function useTranslate() {
   const { t } = useTranslation();
 
-  return function translate(
-    key: string,
-    params?: Record<string, string | number>
-  ): string {
-    return t(key, params);
-  };
+  const translate = useCallback(
+    (key: string, params?: Record<string, string | number>): string => {
+      return t(key, params);
+    },
+    [t]
+  );
+
+  return translate;
 }

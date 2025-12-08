@@ -14,7 +14,7 @@ const MainLayout = observer(() => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="max-w-[1500px] mx-auto w-full px-2 sm:px-4">
+      <div className="max-w-[1500px] mx-auto w-full px-2 sm:px-4 mb-10">
         <Header />
         <main className="grow">
           <Outlet />

@@ -1,6 +1,7 @@
 import { categories as allCategories } from "@/data/category";
 import { products as allProducts } from "@/data/products";
 import type { Category, Product, SubCategory } from "@/types/types";
+import { getLocalizedPrice } from "@/utils/price";
 import { makeAutoObservable } from "mobx";
 
 /**
@@ -112,9 +113,9 @@ export class ProductStore {
     return filtered.slice().sort((a, b) => {
       switch (this.sortBy) {
         case "price-asc":
-          return a.price - b.price;
+          return getLocalizedPrice(a.price) - getLocalizedPrice(b.price);
         case "price-desc":
-          return b.price - a.price;
+          return getLocalizedPrice(b.price) - getLocalizedPrice(a.price);
         case "name":
           return a.name.localeCompare(b.name);
         default:

@@ -1,6 +1,6 @@
 import Typography from "@/components/basic/typography/Typography";
-import ProductCard from "@/components/product/ProductCard";
 import ProductCategoryCard from "@/components/product/ProductCategoryCard";
+import ProductCarousel from "@/components/product/ProductCarousel";
 import { useProductStore } from "@/hooks/useStore";
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
@@ -36,11 +36,7 @@ const ProductsPage = observer(() => {
           </div>
         )}
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-        {productStore.filteredProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      <ProductCarousel data={productStore.filteredProducts} />
     </>
   );
 });

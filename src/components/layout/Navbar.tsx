@@ -30,7 +30,7 @@ const Navbar = () => {
                 <ul className="grid gap-2 md:w-[650px] lg:grid-cols-[.75fr_1fr] p-2">
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
-                      <div className="from-muted/50 to-muted relative flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-1 no-underline outline-hidden transition-all duration-200 select-none focus:shadow-md md:p-6">
+                      <div className="from-muted/50 to-muted relative flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-1 no-underline outline-hidden transition-all duration-300 select-none focus:shadow-md md:p-6">
                         {category.image && (
                           <img
                             src={category.image}
