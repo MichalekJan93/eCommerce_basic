@@ -1,26 +1,16 @@
-import { useParams } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 import { useMemo } from "react";
-import { useProductStore } from "@/hooks/useStore";
-import { getCategoryIdByFullPath, parseProductsPath } from "@/utils/catalog";
+import { useProductPath } from "@/hooks/useProductPath";
+import { getCategoryIdByFullPath } from "@/utils/catalog";
 import ProductsPage from "./ProductsPage";
 import NotFoundPage from "./NotFoundPage";
-
-function getPathSegments(wildcardPath: string | undefined) {
-  if (!wildcardPath) return [];
-  return wildcardPath.split("/").filter(Boolean);
-}
 
 /**
  * Wrapper component that validates the products path
  * and renders either ProductsPage or NotFoundPage
  */
 const ProductsPageWrapper = observer(() => {
-  const { "*": wildcardPath } = useParams<{ "*": string }>();
-  const productStore = useProductStore();
-
-  const pathSegments = getPathSegments(wildcardPath);
-  const parsedPath = parseProductsPath(pathSegments, productStore.products);
+  const { pathSegments, parsedPath } = useProductPath();
 
   const isValidPath = useMemo(() => {
     // Empty path is always valid (shows all products)
@@ -46,4 +36,3 @@ const ProductsPageWrapper = observer(() => {
 });
 
 export default ProductsPageWrapper;
-

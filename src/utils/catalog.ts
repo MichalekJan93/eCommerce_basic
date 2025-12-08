@@ -231,3 +231,13 @@ export const parseProductsPath = (
 
   return { type: "category", categorySegments: pathSegments };
 };
+
+/**
+ * Get path segments from wildcard path
+ * @param wildcardPath Wildcard path
+ * @returns Path segments
+ */
+export const getPathSegments = (wildcardPath: string | undefined) => {
+  if (!wildcardPath) return [];
+  return wildcardPath.split("/").filter(Boolean);
+};

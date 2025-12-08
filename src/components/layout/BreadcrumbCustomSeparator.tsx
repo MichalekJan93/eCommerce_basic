@@ -1,5 +1,5 @@
-import { Fragment, useMemo } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Fragment } from "react";
+import { Link, useLocation } from "react-router-dom";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -10,28 +10,19 @@ import {
 } from "../ui/breadcrumb";
 import { URL_ENDPOINTS } from "@/app/Router";
 import { useProductStore } from "@/hooks/useStore";
+import { useProductPath } from "@/hooks/useProductPath";
 import { useTranslate } from "@/utils/translate";
 import {
   getCategoryFullPathSegments,
   getProductCategoryPath,
-  parseProductsPath,
 } from "@/utils/catalog";
 import { slugify } from "@/utils/slug";
 
 const BreadcrumbCustomSeparator = () => {
   const location = useLocation();
-  const { "*": wildcardPath } = useParams<{ "*": string }>();
   const productStore = useProductStore();
   const translate = useTranslate();
-
-  const pathSegments = useMemo(() => {
-    if (!wildcardPath) return [];
-    return wildcardPath.split("/").filter(Boolean);
-  }, [wildcardPath]);
-
-  const parsedPath = useMemo(() => {
-    return parseProductsPath(pathSegments, productStore.products);
-  }, [pathSegments, productStore.products]);
+  const { parsedPath } = useProductPath();
 
   const items: { label: string; to?: string }[] = [];
 

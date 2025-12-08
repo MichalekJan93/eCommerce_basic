@@ -3,24 +3,17 @@ import ProductCategoryCard from "@/components/product/ProductCategoryCard";
 import ProductCards from "@/components/product/ProductCards";
 import ProductDetailPage from "@/pages/ProductDetailPage";
 import { useProductStore } from "@/hooks/useStore";
+import { useProductPath } from "@/hooks/useProductPath";
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
-import { useSearchParams, useParams } from "react-router-dom";
-import { getCategoryIdByFullPath, parseProductsPath } from "@/utils/catalog";
-
-function getPathSegments(wildcardPath: string | undefined) {
-  if (!wildcardPath) return [];
-  return wildcardPath.split("/").filter(Boolean);
-}
+import { useSearchParams } from "react-router-dom";
+import { getCategoryIdByFullPath } from "@/utils/catalog";
 
 const ProductsPage = observer(() => {
   const [searchParams] = useSearchParams();
-  const { "*": wildcardPath } = useParams<{ "*": string }>();
   const categoryIdParam = searchParams.get("category");
   const productStore = useProductStore();
-
-  const pathSegments = getPathSegments(wildcardPath);
-  const parsedPath = parseProductsPath(pathSegments, productStore.products);
+  const { parsedPath, categorySegmentsKey } = useProductPath();
 
   useEffect(() => {
     let effectiveCategoryId: string | null = categoryIdParam;
@@ -32,7 +25,10 @@ const ProductsPage = observer(() => {
     }
 
     productStore.setCategory(effectiveCategoryId);
-  }, [categoryIdParam, parsedPath.categorySegments, productStore]);
+    // categorySegmentsKey is a string representation of parsedPath.categorySegments
+    // to avoid infinite loop caused by array reference change
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categoryIdParam, categorySegmentsKey, productStore]);
 
   if (parsedPath.type === "product" && parsedPath.productSlug) {
     return <ProductDetailPage productSlug={parsedPath.productSlug} />;
