@@ -1,35 +1,48 @@
 import Typography from "@/components/basic/typography/Typography";
 import ProductCategoryCard from "@/components/product/ProductCategoryCard";
 import ProductCarousel from "@/components/product/ProductCarousel";
+import ProductDetailPage from "@/pages/ProductDetailPage";
 import { useProductStore } from "@/hooks/useStore";
 import { observer } from "mobx-react-lite";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useSearchParams, useParams } from "react-router-dom";
-import { getCategoryIdBySlugSegments } from "@/utils/catalog";
+import { getCategoryIdByFullPath, parseProductsPath } from "@/utils/catalog";
 
 const ProductsPage = observer(() => {
   const [searchParams] = useSearchParams();
-  const { categorySlug, subCategorySlug } = useParams<{
-    categorySlug?: string;
-    subCategorySlug?: string;
-  }>();
-  const categoryId = searchParams.get("category");
+  const { "*": wildcardPath } = useParams<{ "*": string }>();
+  const categoryIdParam = searchParams.get("category");
   const productStore = useProductStore();
 
+  // Parse the wildcard path into segments
+  const pathSegments = useMemo(() => {
+    if (!wildcardPath) return [];
+    return wildcardPath.split("/").filter(Boolean);
+  }, [wildcardPath]);
+
+  // Determine if this is a product or category page
+  const parsedPath = useMemo(() => {
+    return parseProductsPath(pathSegments, productStore.products);
+  }, [pathSegments, productStore.products]);
+
   useEffect(() => {
-    let effectiveCategoryId: string | null = categoryId;
+    let effectiveCategoryId: string | null = categoryIdParam;
 
-    if (!effectiveCategoryId) {
-      const slugs = [categorySlug, subCategorySlug].filter(Boolean) as string[];
-
-      if (slugs.length) {
-        effectiveCategoryId = getCategoryIdBySlugSegments(slugs);
-      }
+    if (!effectiveCategoryId && parsedPath.categorySegments.length > 0) {
+      effectiveCategoryId = getCategoryIdByFullPath(
+        parsedPath.categorySegments
+      );
     }
 
     productStore.setCategory(effectiveCategoryId);
-  }, [categoryId, categorySlug, subCategorySlug, productStore]);
+  }, [categoryIdParam, parsedPath.categorySegments, productStore]);
 
+  // If this is a product page, render ProductDetailPage
+  if (parsedPath.type === "product" && parsedPath.productSlug) {
+    return <ProductDetailPage productSlug={parsedPath.productSlug} />;
+  }
+
+  // Otherwise render category listing
   return (
     <>
       <div className="py-8">

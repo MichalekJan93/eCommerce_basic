@@ -12,7 +12,7 @@ import { useTranslate } from "@/utils/translate";
 import type { SubCategory } from "@/types/types";
 import { useProductStore } from "@/hooks/useStore";
 import { URL_ENDPOINTS } from "@/app/Router";
-import { getCategoryPathSegmentsForCategoryId } from "@/utils/catalog";
+import { getCategoryFullPathSegments } from "@/utils/catalog";
 
 const Navbar = () => {
   const translate = useTranslate();
@@ -84,10 +84,10 @@ function ListItem({
   subCategories?: SubCategory[];
 }) {
   const translate = useTranslate();
-  const segments = getCategoryPathSegmentsForCategoryId(id);
+  const segments = getCategoryFullPathSegments(id);
   const categoryUrl = segments?.length
-    ? `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}?category=${id}`
-    : `${URL_ENDPOINTS.PRODUCTS}?category=${id}`;
+    ? `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}`
+    : URL_ENDPOINTS.PRODUCTS;
 
   return (
     <li {...props}>
@@ -100,17 +100,15 @@ function ListItem({
       <ul className="mt-2 flex gap-4">
         {subCategories &&
           subCategories.map((category) => {
-            const segments = getCategoryPathSegmentsForCategoryId(category.id);
-            const categoryUrl = segments?.length
-              ? `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}?category=${
-                  category.id
-                }`
-              : `${URL_ENDPOINTS.PRODUCTS}?category=${category.id}`;
+            const subSegments = getCategoryFullPathSegments(category.id);
+            const subCategoryUrl = subSegments?.length
+              ? `${URL_ENDPOINTS.PRODUCTS}/${subSegments.join("/")}`
+              : URL_ENDPOINTS.PRODUCTS;
 
             return (
               <Link
                 key={category.id}
-                to={categoryUrl}
+                to={subCategoryUrl}
                 className="hover:underline text-primary text-sm"
               >
                 {translate(category.titleIntlId)}

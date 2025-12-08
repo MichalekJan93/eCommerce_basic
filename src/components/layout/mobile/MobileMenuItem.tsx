@@ -6,7 +6,7 @@ import { useTranslate } from "@/utils/translate";
 import Typography from "../../basic/typography/Typography";
 import type { SubCategory } from "@/types/types";
 import { URL_ENDPOINTS } from "@/app/Router";
-import { getCategoryPathSegmentsForCategoryId } from "@/utils/catalog";
+import { getCategoryFullPathSegments } from "@/utils/catalog";
 
 interface MobileMenuItemProps {
   titleIntlId: string;
@@ -41,14 +41,10 @@ const MobileMenuItem = memo(
           <div className="overflow-hidden">
             <div className="flex flex-col gap-3 pl-2">
               {categories.map((category) => {
-                const segments = getCategoryPathSegmentsForCategoryId(
-                  category.id
-                );
+                const segments = getCategoryFullPathSegments(category.id);
                 const categoryUrl = segments?.length
-                  ? `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}?category=${
-                      category.id
-                    }`
-                  : `${URL_ENDPOINTS.PRODUCTS}?category=${category.id}`;
+                  ? `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}`
+                  : URL_ENDPOINTS.PRODUCTS;
 
                 return (
                   <div key={category.id}>
@@ -63,15 +59,14 @@ const MobileMenuItem = memo(
                     <div className="mt-1 flex flex-wrap gap-2 pl-11">
                       {category.subCategories &&
                         category.subCategories.map((subCategory) => {
-                          const subSegments =
-                            getCategoryPathSegmentsForCategoryId(
-                              subCategory.id
-                            );
+                          const subSegments = getCategoryFullPathSegments(
+                            subCategory.id
+                          );
                           const subCategoryUrl = subSegments?.length
                             ? `${URL_ENDPOINTS.PRODUCTS}/${subSegments.join(
                                 "/"
-                              )}?category=${subCategory.id}`
-                            : `${URL_ENDPOINTS.PRODUCTS}?category=${subCategory.id}`;
+                              )}`
+                            : URL_ENDPOINTS.PRODUCTS;
 
                           return (
                             <Link

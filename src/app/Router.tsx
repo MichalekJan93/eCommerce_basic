@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "@/components/layout/MainLayout";
 import HomePage from "@/pages/HomePage";
 import ProductsPage from "@/pages/ProductsPage";
-import ProductDetailPage from "@/pages/ProductDetailPage";
 import CartPage from "@/pages/CartPage";
 import CheckoutPage from "@/pages/CheckoutPage";
 import NotFoundPage from "@/pages/NotFoundPage";
@@ -29,19 +28,10 @@ const router = createBrowserRouter([
         handle: { title: "Products" },
       },
       {
-        path: `${URL_ENDPOINTS.PRODUCTS}/:categorySlug`,
+        // Wildcard route for dynamic category depth and product detail
+        path: `${URL_ENDPOINTS.PRODUCTS}/*`,
         element: <ProductsPage />,
         handle: { title: "Products" },
-      },
-      {
-        path: `${URL_ENDPOINTS.PRODUCTS}/:categorySlug/:subCategorySlug`,
-        element: <ProductsPage />,
-        handle: { title: "Products" },
-      },
-      {
-        path: `${URL_ENDPOINTS.PRODUCTS}/:categorySlug/:subCategorySlug/:productSlug`,
-        element: <ProductDetailPage />,
-        handle: { title: "Product Detail" },
       },
       {
         path: URL_ENDPOINTS.CART,

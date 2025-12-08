@@ -2,6 +2,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
 import { useProductStore } from "@/hooks/useStore";
 import { observer } from "mobx-react-lite";
 
@@ -14,6 +15,7 @@ const MainLayout = observer(() => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
       <div className="max-w-[1500px] mx-auto w-full px-2 sm:px-4 mb-10">
         <Header />
         <main className="grow">

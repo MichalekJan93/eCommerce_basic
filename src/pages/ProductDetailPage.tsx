@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useCartStore, useProductStore } from "@/hooks/useStore";
 import { useTranslate } from "@/utils/translate";
 import { getLocalizedPrice } from "@/utils/price";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ShoppingBag, Star, ArrowLeft, Check } from "lucide-react";
 import { URL_ENDPOINTS } from "@/app/Router";
 import ProductCarouselGallery from "@/components/product/ProductCarouselGallery";
@@ -12,8 +12,11 @@ import ProductGallery from "@/components/product/ProductGallery";
 import BreadcrumbCustomSeparator from "@/components/layout/BreadcrumbCustomSeparator";
 import { getProductPathSegments, getProductSlug } from "@/utils/catalog";
 
-const ProductDetailPage = () => {
-  const { productSlug } = useParams<{ productSlug: string }>();
+interface ProductDetailPageProps {
+  productSlug: string;
+}
+
+const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
   const navigate = useNavigate();
   const translate = useTranslate();
 

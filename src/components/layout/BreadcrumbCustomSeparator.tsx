@@ -1,10 +1,5 @@
-import { Fragment } from "react";
-import {
-  Link,
-  useLocation,
-  useParams,
-  useSearchParams,
-} from "react-router-dom";
+import { Fragment, useMemo } from "react";
+import { Link, useLocation, useParams } from "react-router-dom";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -17,18 +12,27 @@ import { URL_ENDPOINTS } from "@/app/Router";
 import { useProductStore } from "@/hooks/useStore";
 import { useTranslate } from "@/utils/translate";
 import {
-  getCategoryPathById,
-  getCategoryPathSegmentsForCategoryId,
+  getCategoryFullPathSegments,
   getProductCategoryPath,
-  getProductSlug,
+  parseProductsPath,
 } from "@/utils/catalog";
+import { slugify } from "@/utils/slug";
 
 const BreadcrumbCustomSeparator = () => {
   const location = useLocation();
-  const { productSlug } = useParams<{ productSlug?: string }>();
-  const [searchParams] = useSearchParams();
+  const { "*": wildcardPath } = useParams<{ "*": string }>();
   const productStore = useProductStore();
   const translate = useTranslate();
+
+  // Parse the wildcard path
+  const pathSegments = useMemo(() => {
+    if (!wildcardPath) return [];
+    return wildcardPath.split("/").filter(Boolean);
+  }, [wildcardPath]);
+
+  const parsedPath = useMemo(() => {
+    return parseProductsPath(pathSegments, productStore.products);
+  }, [pathSegments, productStore.products]);
 
   const items: { label: string; to?: string }[] = [];
 
@@ -37,28 +41,26 @@ const BreadcrumbCustomSeparator = () => {
   items.push({ label: "Home", to: isHome ? undefined : URL_ENDPOINTS.HOME });
 
   if (isHome) {
-    // jen Home
+    // just Home
   } else if (location.pathname === URL_ENDPOINTS.CART) {
     items.push({ label: "Cart" });
   } else if (location.pathname === URL_ENDPOINTS.CHECKOUT) {
     items.push({ label: "Checkout" });
   } else if (location.pathname.startsWith(URL_ENDPOINTS.PRODUCTS)) {
-    if (productSlug) {
+    if (parsedPath.type === "product" && parsedPath.productSlug) {
       // Product detail page
       const product = productStore.products.find(
-        (p) => getProductSlug(p) === productSlug
+        (p) => slugify(p.name) === parsedPath.productSlug
       );
 
       if (product) {
         const categoryPath = getProductCategoryPath(product);
 
         categoryPath.forEach((category) => {
-          const segments = getCategoryPathSegmentsForCategoryId(category.id);
+          const segments = getCategoryFullPathSegments(category.id);
           const categoryUrl = segments?.length
-            ? `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}?category=${
-                category.id
-              }`
-            : `${URL_ENDPOINTS.PRODUCTS}?category=${category.id}`;
+            ? `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}`
+            : URL_ENDPOINTS.PRODUCTS;
 
           items.push({
             label: translate(category.titleIntlId),
@@ -70,33 +72,61 @@ const BreadcrumbCustomSeparator = () => {
       } else {
         items.push({ label: "Product" });
       }
-    } else {
-      // Products list page
-      const categoryId = searchParams.get("category");
+    } else if (parsedPath.categorySegments.length > 0) {
+      // Category page - build breadcrumb from path segments
+      const category = productStore.selectedCategory;
 
-      if (categoryId) {
-        const categoryPath = getCategoryPathById(categoryId);
+      if (category) {
+        // Build breadcrumb from the actual category path in store
+        if (productStore.selectedCategory) {
+          // Get the path to current category
+          const currentCatPath = getCategoryFullPathSegments(
+            productStore.selectedCategory.id
+          );
 
-        if (categoryPath) {
-          categoryPath.forEach((category, index) => {
-            const isLast = index === categoryPath.length - 1;
+          if (currentCatPath) {
+            // Build accumulated path for each segment
+            let accumulatedSegments: string[] = [];
 
-            const segments = getCategoryPathSegmentsForCategoryId(category.id);
-            const categoryUrl = segments?.length
-              ? `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}?category=${
-                  category.id
-                }`
-              : `${URL_ENDPOINTS.PRODUCTS}?category=${category.id}`;
+            currentCatPath.forEach((segment, index) => {
+              accumulatedSegments = [...accumulatedSegments, segment];
+              const isLast = index === currentCatPath.length - 1;
+              const categoryUrl = `${
+                URL_ENDPOINTS.PRODUCTS
+              }/${accumulatedSegments.join("/")}`;
 
-            items.push({
-              label: translate(category.titleIntlId),
-              to: isLast ? undefined : categoryUrl,
+              const matchingCat = productStore.categories
+                .flatMap((c) => {
+                  const flatten = (
+                    cat: typeof c,
+                    acc: (typeof c)[] = []
+                  ): (typeof c)[] => {
+                    acc.push(cat);
+                    if (cat.subCategories) {
+                      for (const sub of cat.subCategories) {
+                        flatten(sub as typeof c, acc);
+                      }
+                    }
+                    return acc;
+                  };
+                  return flatten(c);
+                })
+                .find((c) => slugify(c.name) === segment);
+
+              items.push({
+                label: matchingCat
+                  ? translate(matchingCat.titleIntlId)
+                  : segment,
+                to: isLast ? undefined : categoryUrl,
+              });
             });
-          });
+          }
         }
       } else {
         items.push({ label: "Products" });
       }
+    } else {
+      items.push({ label: "Products" });
     }
   }
 
