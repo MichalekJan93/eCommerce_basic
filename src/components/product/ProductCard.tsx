@@ -12,15 +12,17 @@ import { ShoppingBag } from "lucide-react";
 import Typography from "../basic/typography/Typography";
 import { URL_ENDPOINTS } from "@/app/Router";
 import { getProductPathSegments } from "@/utils/catalog";
-import { getFormattedPrice } from "@/utils/price";
+import { getFormattedPrice, getLocalizedPrice } from "@/utils/price";
+import { useCartStore } from "@/hooks/useStore";
 
 export interface ProductCardProps {
   product: Product;
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
-  const formattedPrice = getFormattedPrice(product.price);
+  const cartStore = useCartStore();
 
+  const formattedPrice = getFormattedPrice(product.price);
   const segments = getProductPathSegments(product);
   const productUrl = `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}`;
 
@@ -47,10 +49,19 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <Typography type="p">{formattedPrice}</Typography>
         </div>
       </CardContent>
+
       <Button
         variant="outline"
         size="sm"
         className="bg-primary text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground relative z-10 text-xs sm:text-sm"
+        onClick={() =>
+          cartStore.addItem({
+            id: product.id,
+            name: product.name,
+            price: getLocalizedPrice(product.price),
+            image: product.images[0],
+          })
+        }
       >
         <ShoppingBag className="w-4 h-4" />
         <span className="hidden xs:inline ml-1">Add to cart</span>

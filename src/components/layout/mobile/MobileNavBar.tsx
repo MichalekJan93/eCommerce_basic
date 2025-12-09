@@ -19,7 +19,7 @@ const MobileNavBar = () => {
     <Sheet>
       <SheetTrigger asChild>
         <Button variant="outline" size="icon">
-          <Menu className="h-[1.2rem] w-[1.2rem]" />
+          <Menu />
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="overflow-y-auto">

@@ -35,6 +35,12 @@ export class CartStore {
 
   updateQuantity(id: string, quantity: number) {
     const item = this.items.find((item) => item.id === id);
+
+    if (quantity < 1) {
+      this.removeItem(id);
+      return;
+    }
+
     if (item) {
       item.quantity = quantity;
       this.saveToLocalStorage();

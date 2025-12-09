@@ -1,1 +1,6 @@
-{}
+{
+    "cart": "Košík",
+    "items": "Položky",
+    "noItems": "Žádná položka v košíku",
+    "total": "Celkem"
+}

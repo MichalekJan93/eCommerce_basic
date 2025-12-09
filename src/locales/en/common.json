@@ -1,1 +1,6 @@
-{}
+{
+    "cart": "Cart",
+    "items": "Items",
+    "noItems": "No items in cart",
+    "total": "Total"
+}
