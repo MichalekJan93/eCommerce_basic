@@ -5,12 +5,13 @@ import { useCartStore, useProductStore } from "@/hooks/useStore";
 import { useTranslate } from "@/utils/translate";
 import { getLocalizedPrice, formatPrice } from "@/utils/price";
 import { useNavigate, Link } from "react-router-dom";
-import { ShoppingBag, Star, ArrowLeft, Check } from "lucide-react";
+import { ShoppingBag, Star, ArrowLeft, Check, PackageX } from "lucide-react";
 import { URL_ENDPOINTS } from "@/app/Router";
 import ProductCarouselGallery from "@/components/product/ProductCarouselGallery";
 import ProductGallery from "@/components/product/ProductGallery";
 import BreadcrumbCustomSeparator from "@/components/layout/BreadcrumbCustomSeparator";
 import { getProductPathSegments, getProductSlug } from "@/utils/catalog";
+import { useMemo } from "react";
 
 interface ProductDetailPageProps {
   productSlug: string;
@@ -27,18 +28,51 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
     (p) => getProductSlug(p) === productSlug
   );
 
+  const galleryProducts = useMemo(() => {
+    if (!product) return [];
+    return productStore.products
+      .filter((p) => p.id !== product.id)
+      .filter((p) =>
+        p.categoriesId.some((c) => product.categoriesId.includes(c))
+      );
+  }, [productStore.products, product]);
+
   if (!product) {
     return (
-      /* TODO lepsi komponenta */
-      <div className="py-8 text-center">
-        <Typography type="H2">Produkt nebyl nalezen</Typography>
-        <Button
-          className="mt-4"
-          onClick={() => navigate(URL_ENDPOINTS.PRODUCTS)}
-        >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          <Typography type="p">Zpět na produkty</Typography>
-        </Button>
+      <div className="py-12 flex justify-center">
+        <Card className="w-full max-w-xl">
+          <CardContent className="flex flex-col items-center gap-4 text-center py-10">
+            <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center">
+              <PackageX className="w-8 h-8 text-muted-foreground" />
+            </div>
+            <Typography type="H3">Produkt nebyl nalezen</Typography>
+            <Typography type="muted" className="max-w-md">
+              Tento produkt už není k dispozici nebo byl přesunut. Zkuste se
+              vrátit zpět nebo pokračujte v prohlížení dalších produktů.
+            </Typography>
+            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center">
+              <Button
+                variant="outline"
+                className="w-full sm:w-auto"
+                onClick={() => navigate(-1)}
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                <Typography type="p" className="mt-0">
+                  Zpět
+                </Typography>
+              </Button>
+              <Button
+                className="w-full sm:w-auto"
+                onClick={() => navigate(URL_ENDPOINTS.PRODUCTS)}
+              >
+                <ShoppingBag className="w-4 h-4 mr-2" />
+                <Typography type="p" className="mt-0">
+                  Pokračovat v nákupu
+                </Typography>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     );
   }
@@ -46,7 +80,7 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
   const price = getLocalizedPrice(product.price);
   const formattedPrice = formatPrice(price);
 
-  const handleAddToCart = () => {
+  const handleadd_to_cart = () => {
     cartStore.addItem({
       id: product.id,
       name: product.name,
@@ -182,7 +216,7 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
           <Button
             size="lg"
             className="w-full sm:w-auto flex items-center justify-center"
-            onClick={handleAddToCart}
+            onClick={handleadd_to_cart}
             disabled={product.stock === 0}
           >
             <ShoppingBag className="w-5 h-5 mr-2" />
@@ -220,7 +254,7 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
       </div>
       <div className="mt-8 sm:mt-10 lg:mt-12 flex flex-col gap-4">
         <Typography type="H4" intlId="products:detail.similar_products" />
-        <ProductCarouselGallery data={productStore.products} />
+        <ProductCarouselGallery data={galleryProducts} />
       </div>
     </div>
   );

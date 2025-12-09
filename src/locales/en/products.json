@@ -119,6 +119,214 @@
       "color": "White",
       "currency": "EUR",
       "price": 899
+    },
+    "samsung_s21_green": {
+      "name": "Samsung Galaxy S21 Green",
+      "short_description": "A reliable Samsung Galaxy S21 in a refreshing green color, featuring the powerful Exynos 2100 processor, quality AMOLED display, and versatile camera system. An ideal choice for users seeking solid performance at a reasonable price.",
+      "long_description": "The Samsung Galaxy S21 Green is an elegant smartphone with a modern design and refreshing green finish. It features a 6.2-inch Dynamic AMOLED 2X display with Full HD+ resolution and 120Hz refresh rate for smooth visuals. The powerful Exynos 2100 processor ensures fast app and gaming performance. The triple camera system with a main 64MP sensor captures quality photos and 8K video. The 4000mAh battery with fast charging support lasts all day. The phone is water and dust resistant with IP68 certification.",
+      "color": "Green",
+      "currency": "EUR",
+      "price": 499
+    },
+    "samsung_s22_black": {
+      "name": "Samsung Galaxy S22 Black",
+      "short_description": "An elegant Samsung Galaxy S22 in classic black, offering compact dimensions, the powerful Snapdragon 8 Gen 1 chip, and an improved 50MP camera. A great choice for those who prefer a smaller phone with premium features.",
+      "long_description": "The Samsung Galaxy S22 Black combines a sophisticated black design with compact dimensions that fit comfortably in your hand. Equipped with a 6.1-inch Dynamic AMOLED 2X display with adaptive refresh rate up to 120Hz, it offers an excellent visual experience. The Snapdragon 8 Gen 1 processor provides top-tier performance for demanding apps and games. The triple camera with 50MP main sensor and optical stabilization captures sharp images even in low light conditions. The 3700mAh battery supports fast and wireless charging. IP68 certification ensures water and dust resistance.",
+      "color": "Black",
+      "currency": "EUR",
+      "price": 649
+    },
+    "samsung_s23_black": {
+      "name": "Samsung Galaxy S23 Black",
+      "short_description": "A premium Samsung Galaxy S23 in elegant black, featuring the latest Snapdragon 8 Gen 2, excellent 50MP camera with advanced night mode, and long battery life. The perfect smartphone for demanding users.",
+      "long_description": "The Samsung Galaxy S23 Black represents the pinnacle of the Galaxy S23 series in a timeless black finish. It features a 6.1-inch Dynamic AMOLED 2X display with brightness up to 1750 nits and Vision Booster technology for perfect sunlight readability. The Snapdragon 8 Gen 2 processor optimized for Galaxy delivers extreme performance and efficiency. The triple camera with 50MP main sensor, 12MP ultra-wide, and 10MP telephoto with 3x optical zoom captures professional shots. Enhanced night mode and AI image processing deliver exceptional results even in low light. The 3900mAh battery with 25W fast charging lasts a full day of intensive use.",
+      "color": "Black",
+      "currency": "EUR",
+      "price": 849
+    },
+    "samsung_s23_green": {
+      "name": "Samsung Galaxy S23 Green",
+      "short_description": "A stylish Samsung Galaxy S23 in a unique green color, combining premium design with the latest Snapdragon 8 Gen 2 processor, advanced camera, and excellent display. For those who want to stand out.",
+      "long_description": "The Samsung Galaxy S23 Green impresses with its elegant green finish, giving the phone a fresh and modern look. Equipped with a 6.1-inch Dynamic AMOLED 2X display with adaptive 48-120Hz refresh rate, it offers amazing colors and contrast. The latest Snapdragon 8 Gen 2 for Galaxy processor provides unmatched performance and energy efficiency. The camera with 50MP main sensor, optical stabilization, and advanced AI processing captures detailed photos and 8K video. The durable Armor Aluminum construction with IP68 certification and Gorilla Glass Victus 2 protects the phone from damage. The 3900mAh battery ensures all-day endurance.",
+      "color": "Green",
+      "currency": "EUR",
+      "price": 849
+    },
+    "xiaomi_12_green": {
+      "name": "Xiaomi 12 Green",
+      "short_description": "A compact Xiaomi 12 in green, featuring the powerful Snapdragon 8 Gen 1, 50MP camera, and fast 67W charging. Excellent value for money in an elegant and manageable form factor.",
+      "long_description": "The Xiaomi 12 Green is a compact flagship with a refreshing green design. It features a 6.28-inch AMOLED display with Full HD+ resolution, 120Hz refresh rate, and brightness up to 1100 nits. The Snapdragon 8 Gen 1 processor provides top-tier performance for all tasks. The triple camera with 50MP Sony IMX766 main sensor with optical stabilization captures quality shots day and night. The 4500mAh battery supports ultra-fast 67W wired and 50W wireless charging - full charge in just 39 minutes. Harman Kardon stereo speakers complete the premium audio experience.",
+      "color": "Green",
+      "currency": "EUR",
+      "price": 449
+    },
+    "xiaomi_12_blue": {
+      "name": "Xiaomi 12 Blue",
+      "short_description": "A stylish Xiaomi 12 in blue, offering compact design, flagship Snapdragon 8 Gen 1 processor, quality 50MP camera, and lightning-fast 67W charging at an attractive price.",
+      "long_description": "The Xiaomi 12 Blue combines an attractive blue finish with compact dimensions that fit comfortably in one hand. Equipped with a 6.28-inch AMOLED display with True Color rendering, 120Hz refresh rate, and Dolby Vision technology for an amazing visual experience. The Snapdragon 8 Gen 1 processor ensures smooth operation even for the most demanding games and apps. The camera with 50MP main sensor, 13MP ultra-wide, and 5MP telemacro lens covers all photography situations. The 4500mAh battery with 67W fast charging reaches 100% in less than 40 minutes. Harman Kardon certified stereo speakers deliver rich sound.",
+      "color": "Blue",
+      "currency": "EUR",
+      "price": 449
+    },
+    "xiaomi_13_blue": {
+      "name": "Xiaomi 13 Blue",
+      "short_description": "An elegant Xiaomi 13 in blue, featuring Leica optics collaboration, powerful Snapdragon 8 Gen 2, and premium AMOLED display. A photography-focused smartphone for demanding users.",
+      "long_description": "The Xiaomi 13 Blue is a flagship smartphone with an elegant blue design and premium equipment. It features a 6.36-inch AMOLED display with 1080 x 2400 pixel resolution, 120Hz refresh rate, brightness up to 1900 nits, and Gorilla Glass Victus protection. The Snapdragon 8 Gen 2 processor provides extreme performance and energy efficiency. The camera developed in collaboration with Leica includes a 50MP Sony IMX800 main sensor, 12MP ultra-wide, and 10MP telephoto with 3.2x optical zoom. Leica Authentic and Leica Vibrant modes offer unique photography styles. The 4500mAh battery with 67W wired and 50W wireless charging ensures all-day endurance.",
+      "color": "Blue",
+      "currency": "EUR",
+      "price": 649
+    },
+    "xiaomi_14_green": {
+      "name": "Xiaomi 14 Green",
+      "short_description": "A top-tier Xiaomi 14 in green, featuring the latest Snapdragon 8 Gen 3, professional Leica camera with variable aperture, and premium LTPO AMOLED display. The flagship for 2024.",
+      "long_description": "The Xiaomi 14 Green represents the latest flagship in an attractive green finish. Equipped with a 6.36-inch LTPO AMOLED display with 1.5K resolution, 1-120Hz refresh rate, brightness up to 3000 nits, and DisplayMate A+ certification. The latest Snapdragon 8 Gen 3 processor provides unmatched performance and efficiency. The triple Leica Summilux camera includes a 50MP Light Fusion 900 main sensor with variable f/1.42-4.0 aperture, 50MP ultra-wide, and 50MP telephoto with 3.2x optical zoom. The 4610mAh battery with 90W wired and 50W wireless charging. IP68 certification and Gorilla Glass Victus ensure maximum durability.",
+      "color": "Green",
+      "currency": "EUR",
+      "price": 849
+    },
+    "xiaomi_14_white": {
+      "name": "Xiaomi 14 White",
+      "short_description": "A premium Xiaomi 14 in pure white, combining the latest technologies including Snapdragon 8 Gen 3, professional Leica photo system, and ultra-bright AMOLED display. Perfect elegance and performance.",
+      "long_description": "The Xiaomi 14 White impresses with its elegant white finish with a matte surface treatment that resists fingerprints. The 6.36-inch display uses LTPO AMOLED technology with 2670 x 1200 pixel resolution, adaptive 1-120Hz refresh rate, and extreme 3000 nit brightness. The Snapdragon 8 Gen 3 processor with Adreno 750 graphics provides the highest possible performance. The Leica Summilux camera with three 50MP sensors, variable aperture, and advanced Leica modes captures professional shots. The 4610mAh battery with ultra-fast 90W charging reaches 100% in just 31 minutes. The phone is durable thanks to IP68 certification and Gorilla Glass Victus protection.",
+      "color": "White",
+      "currency": "EUR",
+      "price": 849
+    },
+    "dell_inspiron_silver": {
+      "name": "Dell Inspiron 15 Silver",
+      "short_description": "An affordable Dell Inspiron 15 notebook in elegant silver, offering reliable performance for everyday work, study, and entertainment. An ideal choice for home users and students.",
+      "long_description": "The Dell Inspiron 15 Silver is a versatile notebook designed for everyday productivity. It features a 15.6-inch Full HD display with ComfortView technology to reduce blue light and protect your eyes. The latest generation Intel Core i5 processor ensures smooth operation of office applications, web browsing, and video streaming. 8GB RAM and 512GB SSD provide ample space and speed for common tasks. The keyboard with numeric keypad and large touchpad increases work comfort. The battery lasts up to 8 hours, enabling all-day work without charging. The notebook is equipped with USB-C, USB 3.2, HDMI, and SD card reader.",
+      "color": "Silver",
+      "currency": "EUR",
+      "price": 599
+    },
+    "dell_latitute_silver": {
+      "name": "Dell Latitude 5540 Silver",
+      "short_description": "A professional business notebook Dell Latitude 5540 in silver, offering high reliability, advanced security, and performance for demanding business applications.",
+      "long_description": "The Dell Latitude 5540 Silver is a premium business notebook engineered for maximum reliability and productivity. Equipped with a 15.6-inch Full HD IPS display with low reflection and optional touch layer. Intel Core i7 vPro processor provides top-tier performance for demanding enterprise applications and multitasking. 16GB RAM and 512GB SSD with encryption ensure speed and data security. The notebook features advanced security including fingerprint reader, IR camera for Windows Hello, and TPM 2.0. The durable construction meets MIL-STD-810H military standards. Battery life up to 10 hours enables all-day work. Complete connectivity includes Thunderbolt 4, USB-A, HDMI 2.0, and microSD.",
+      "color": "Silver",
+      "currency": "EUR",
+      "price": 1299
+    },
+    "dell_xps-black": {
+      "name": "Dell XPS 15 Black",
+      "short_description": "A premium Dell XPS 15 ultrabook in elegant black, combining top-tier performance, stunning OLED display, and premium materials. The perfect tool for creative professionals.",
+      "long_description": "The Dell XPS 15 Black represents the pinnacle of notebook design, utilizing carbon fiber and aluminum for maximum durability at minimum weight. The 15.6-inch 3.5K OLED display with 100% DCI-P3 coverage and 400 nit brightness provides a stunning visual experience for photo and video editing. The Intel Core i7-13700H processor with 14 cores and NVIDIA GeForce RTX 4060 graphics handle even the most demanding creative tasks. 32GB DDR5 RAM and 1TB NVMe SSD provide extreme speed. Four speakers with Dolby Atmos support offer spatial sound. The 86Wh battery lasts up to 13 hours. Thunderbolt 4 ports enable external monitor connection and fast charging.",
+      "color": "Black",
+      "currency": "EUR",
+      "price": 2199
+    },
+    "dell_xps-silver": {
+      "name": "Dell XPS 15 Silver",
+      "short_description": "An elegant Dell XPS 15 ultrabook in silver with OLED display, powerful Intel processor, and premium construction. Perfect for demanding users and professionals.",
+      "long_description": "The Dell XPS 15 Silver combines iconic silver design with premium materials including machined aluminum and glass fiber. The stunning 15.6-inch 3.5K OLED display offers infinite contrast, vivid colors, and HDR support for professional image work. The Intel Core i7-13700H processor provides high performance for multitasking, video editing, and 3D modeling. NVIDIA GeForce RTX 4060 graphics accelerate creative applications. 32GB DDR5 RAM ensures smooth work with large files. 1TB SSD offers lightning-fast loading. Edge-to-edge backlit keyboard and precise touchpad increase productivity. Battery life up to 13 hours enables mobile work without compromises.",
+      "color": "Silver",
+      "currency": "EUR",
+      "price": 2199
+    },
+    "imac_24_blue": {
+      "name": "iMac 24\" Blue",
+      "short_description": "An elegant iMac 24\" desktop computer in blue with Apple M4 chip, stunning 4.5K Retina display, and minimalist design. The perfect solution for home and office.",
+      "long_description": "The iMac 24\" Blue brings a fresh blue design that will liven up any workspace. The stunning 24-inch 4.5K Retina display with 500 nit brightness, billion colors, and True Tone technology provides a perfect image for creative work and entertainment. The Apple M4 chip with 10-core CPU and 10-core GPU delivers blazing performance for demanding applications including 4K video editing. 16GB unified memory and 512GB SSD provide speed and space. The six-speaker sound system with spatial audio and Dolby Atmos offers a cinematic audio experience. FaceTime HD camera with Center Stage technology and three studio-quality microphones are ideal for video calls. The construction at just 11.5mm thick looks timeless.",
+      "color": "Blue",
+      "currency": "EUR",
+      "price": 1699
+    },
+    "imac_24_green": {
+      "name": "iMac 24\" Green",
+      "short_description": "A stylish iMac 24\" in green combining the powerful Apple M4 chip, beautiful 4.5K Retina display, and unique design. The perfect choice for creative work and everyday use.",
+      "long_description": "The iMac 24\" Green impresses with its elegant green color that gives the workspace a fresh and modern look. The 24-inch 4.5K Retina display with 4480 x 2520 pixel resolution offers incredible sharpness and accurate color reproduction thanks to the wide P3 gamut. The Apple M4 chip delivers revolutionary performance thanks to advanced 3nm technology - up to 1.8x faster CPU and 2.2x faster GPU compared to the previous generation. 16GB unified memory ensures smooth multitasking. 512GB SSD offers fast app and file loading. The advanced six-speaker audio system supports spatial sound. Magic Keyboard with Touch ID and Magic Mouse are included. All packed in an ultra-thin construction weighing only 4.46 kg.",
+      "color": "Green",
+      "currency": "EUR",
+      "price": 1699
+    },
+    "ipad_11_pink": {
+      "name": "iPad 11\" Pink",
+      "short_description": "A versatile iPad 11\" in pink with Apple A16 Bionic chip, Liquid Retina display, and Apple Pencil support. An ideal tablet for work, study, and creativity.",
+      "long_description": "The iPad 11\" Pink offers stylish pink finish in a compact and lightweight design. The 11-inch Liquid Retina display with 2388 x 1668 pixel resolution, 500 nit brightness, and True Tone technology provides a great visual experience. The Apple A16 Bionic chip delivers high performance for demanding apps, games, and creative work. 128GB storage offers plenty of space for apps, photos, and documents. The 12MP rear camera with 4K video support and 12MP ultra-wide front camera with Center Stage are ideal for photos and video calls. Apple Pencil Pro and Magic Keyboard Folio support extends usage possibilities. USB-C port ensures fast charging and data transfer. Battery lasts up to 10 hours.",
+      "color": "Pink",
+      "currency": "EUR",
+      "price": 499
+    },
+    "ipad_11_yellow": {
+      "name": "iPad 11\" Yellow",
+      "short_description": "A colorful iPad 11\" in yellow featuring the powerful A16 Bionic chip, quality Liquid Retina display, and Apple accessory support. A great companion for everyday tasks.",
+      "long_description": "The iPad 11\" Yellow impresses with its vibrant yellow color that gives the tablet a playful and energetic look. The 11-inch Liquid Retina display offers sharp rendering with P3 wide color gamut support and anti-reflective coating for comfortable use. The Apple A16 Bionic processor with Neural Engine provides performance for the most demanding apps and advanced machine learning features. 128GB flash storage holds thousands of photos, apps, and documents. The front ultra-wide camera with Center Stage automatically follows the user during video calls. The rear 12MP camera captures quality photos and 4K video. Apple Pencil and keyboard compatibility extends productivity. Wi-Fi 6 ensures fast internet connection.",
+      "color": "Yellow",
+      "currency": "EUR",
+      "price": 499
+    },
+    "ipad_pro_black": {
+      "name": "iPad Pro 13\" Black",
+      "short_description": "A professional iPad Pro 13\" in black with revolutionary Apple M4 chip, stunning Ultra Retina XDR display, and premium performance. The ultimate tool for professionals.",
+      "long_description": "The iPad Pro 13\" Black represents the most advanced tablet on the market in an elegant black finish. The revolutionary 13-inch Ultra Retina XDR display with tandem OLED technology offers brightness up to 1600 nits, XDR contrast of 1,000,000:1, and ProMotion support with 120Hz refresh rate. The Apple M4 chip with up to 10-core CPU and 10-core GPU provides performance comparable to professional laptops. 16GB RAM and 512GB SSD ensure lightning-fast work with large projects. LiDAR scanner and 12MP camera with ProRes video support open professional possibilities. Apple Pencil Pro support with haptic feedback and Magic Keyboard make the iPad a full-fledged work tool. Face ID and 5G connectivity complete the premium package.",
+      "color": "Black",
+      "currency": "EUR",
+      "price": 1599
+    },
+    "ipad_pro_silver": {
+      "name": "iPad Pro 13\" Silver",
+      "short_description": "A top-tier iPad Pro 13\" in silver with M4 chip, Ultra Retina XDR display, and professional features. Ideal for creative work and demanding users.",
+      "long_description": "The iPad Pro 13\" Silver combines elegant silver design with the most advanced technologies. The 13-inch Ultra Retina XDR display uses tandem OLED technology for incredible brightness, contrast, and color accuracy - ideal for professional photo and video editing. The Apple M4 chip built on 3nm process offers unmatched performance while maintaining all-day battery life. 16GB unified memory and 512GB fast SSD storage handle even the most demanding workflows. The front TrueDepth camera with Face ID and rear 12MP wide camera with LiDAR scanner cover all needs. Thunderbolt/USB 4 support enables connection of professional monitors and accessories. Ultra-thin construction at 5.1mm thick and weighing 579g.",
+      "color": "Silver",
+      "currency": "EUR",
+      "price": 1599
+    },
+    "macbook_pro_m5_black": {
+      "name": "MacBook Pro 16\" M5 Black",
+      "short_description": "The latest MacBook Pro 16\" with revolutionary Apple M5 chip in elegant black. Top-tier performance, stunning Liquid Retina XDR display, and all-day battery life for professionals.",
+      "long_description": "The MacBook Pro 16\" M5 Black represents the pinnacle of notebook technology in sophisticated Space Black finish. The 16.2-inch Liquid Retina XDR display with 3456 x 2234 pixel resolution, brightness up to 1600 nits, and 1,000,000:1 contrast offers a stunning visual experience. The revolutionary Apple M5 chip with 14-core CPU and 30-core GPU provides unprecedented performance for professional video editing, 3D rendering, and application development. 48GB unified memory and 1TB SSD ensure lightning-fast work with massive projects. The six-speaker sound system with spatial audio and advanced studio-quality microphones. Battery lasts up to 22 hours of video playback. Thunderbolt 5, HDMI 2.1, SDXC slot, and MagSafe 3 provide complete connectivity.",
+      "color": "Black",
+      "currency": "EUR",
+      "price": 3599
+    },
+    "lenovo_ideapad_blue": {
+      "name": "Lenovo IdeaPad Slim 5 Blue",
+      "short_description": "A stylish Lenovo IdeaPad Slim 5 notebook in blue offering elegant design, solid performance, and great value. Ideal for students and home users.",
+      "long_description": "The Lenovo IdeaPad Slim 5 Blue impresses with its attractive blue finish and slim profile at just 17.9mm thick. The 15.6-inch Full HD IPS display with 300 nit brightness and 100% sRGB coverage provides accurate colors and wide viewing angles. The AMD Ryzen 7 7730U processor with 8 cores ensures smooth performance for work, study, and entertainment. 16GB DDR5 RAM and 512GB SSD offer speed and plenty of space. Integrated AMD Radeon graphics handle casual games and multimedia. Backlit keyboard and fingerprint reader increase comfort and security. The 57Wh battery lasts up to 12 hours. Fast charging provides 2 hours of use in just 15 minutes. USB-C, USB-A, and HDMI ensure versatile connectivity.",
+      "color": "Blue",
+      "currency": "EUR",
+      "price": 749
+    },
+    "lenovo_ideapad_grey": {
+      "name": "Lenovo IdeaPad Slim 5 Grey",
+      "short_description": "An elegant Lenovo IdeaPad Slim 5 in grey combining modern design, powerful hardware, and long battery life. A great choice for everyday productivity.",
+      "long_description": "The Lenovo IdeaPad Slim 5 Grey offers timeless grey design in a robust aluminum construction. The 15.6-inch Full HD IPS display with anti-glare coating and TÜV Rheinland certification for eye protection is ideal for long working hours. The AMD Ryzen 7 7730U processor provides performance for multitasking, video conferences, and light creative work. 16GB DDR5 RAM with expansion option and 512GB NVMe SSD ensure fast system response. Stereo speakers with Dolby Audio offer quality sound for movies and music. HD webcam with physical privacy shutter protects your privacy. Battery lasts up to 12 hours of regular use. Rapid Charge technology charges 80% capacity in an hour. Complete port selection includes 2x USB-A, USB-C, and HDMI 1.4.",
+      "color": "Grey",
+      "currency": "EUR",
+      "price": 749
+    },
+    "lenovo_thinkpad_black": {
+      "name": "Lenovo ThinkPad X1 Carbon Black",
+      "short_description": "The iconic Lenovo ThinkPad X1 Carbon business ultrabook in classic black. Premium construction, top-tier performance, and legendary keyboard for professionals.",
+      "long_description": "The Lenovo ThinkPad X1 Carbon Black is synonymous with professional notebooks in an elegant matte black carbon fiber finish. The 14-inch 2.8K OLED display with 2880 x 1800 pixel resolution, 100% DCI-P3 coverage, and 400 nit brightness offers visual perfection. The Intel Core Ultra 7 processor with integrated NPU for AI tasks provides exceptional performance. 32GB LPDDR5x RAM and 1TB PCIe Gen4 SSD ensure lightning-fast work. The legendary ThinkPad keyboard with TrackPoint offers the best typing experience in the industry. Advanced security includes Match-on-Chip fingerprint reader, IR camera, and dTPM 2.0. MIL-SPEC standard construction weighs just 1.09 kg. Battery lasts up to 15 hours. Thunderbolt 4, USB-A, and HDMI 2.1.",
+      "color": "Black",
+      "currency": "EUR",
+      "price": 2099
+    },
+    "lenovo_thinkpad_silver": {
+      "name": "Lenovo ThinkPad X1 Carbon Silver",
+      "short_description": "A premium ThinkPad X1 Carbon ultrabook in silver offering excellent performance, OLED display, and legendary reliability for demanding professionals.",
+      "long_description": "The Lenovo ThinkPad X1 Carbon Silver brings the iconic ThinkPad series in a modern silver design. The 14-inch 2.8K OLED display provides perfect blacks, infinite contrast, and accurate color reproduction for professional image work. The Intel Core Ultra 7 processor with Neural Processing Unit accelerates AI applications and increases productivity. 32GB LPDDR5x memory and 1TB SSD with Opal 2.0 encryption offer enterprise-level performance and security. The ThinkPad keyboard with backlighting and TrackPoint is an industry standard. Security features include Windows Hello IR camera, fingerprint reader, and hardware TPM. The ultra-light magnesium-aluminum alloy construction weighs just 1.09 kg. Battery life up to 15 hours. Complete connectivity with Thunderbolt 4 and 5G WWAN.",
+      "color": "Silver",
+      "currency": "EUR",
+      "price": 2099
+    },
+    "lenovo_yoga_black": {
+      "name": "Lenovo Yoga 9i Black",
+      "short_description": "A premium Lenovo Yoga 9i convertible notebook in black with OLED display, 360° rotating hinge, and stylus. The perfect combination of performance and flexibility.",
+      "long_description": "The Lenovo Yoga 9i Black is a premium convertible notebook in an elegant black finish with metal body and iconic rotating hinge. The 14-inch 2.8K OLED touchscreen display with 2880 x 1800 pixel resolution, 100% DCI-P3 coverage, and 90Hz refresh rate offers a stunning visual experience. The Intel Core Ultra 7 processor with Evo certification ensures blazing performance and instant wake. 32GB LPDDR5x RAM and 1TB SSD provide capacity for demanding projects. Four Bowers & Wilkins speakers with Dolby Atmos offer spatial sound. The Lenovo Precision Pen is integrated directly in the notebook body. Battery lasts up to 14 hours, fast charging provides 4 hours in 30 minutes. The 360° hinge enables notebook, tent, tablet, and presentation modes.",
+      "color": "Black",
+      "currency": "EUR",
+      "price": 1849
+    },
+    "lenovo_yoga_grey": {
+      "name": "Lenovo Yoga 9i Grey",
+      "short_description": "An elegant Lenovo Yoga 9i convertible in grey with OLED touchscreen display, integrated stylus, and premium Bowers & Wilkins audio system.",
+      "long_description": "The Lenovo Yoga 9i Grey combines sophisticated grey design with maximum flexibility of a convertible notebook. The 14-inch 2.8K OLED touchscreen display with HDR support, infinite contrast, and PureSight technology offers professional image quality. The 360° rotating hinge enables smooth transition between modes for work, creativity, and relaxation. The Intel Core Ultra 7 processor with Intel Arc graphics provides performance for creative applications and productivity. 32GB memory and 1TB storage handle demanding multitasking scenarios. The premium Bowers & Wilkins audio system with four speakers offers studio sound. The Lenovo Precision Pen stored in the body is always at hand. Battery with 14-hour life and fast charging. Full HD webcam with IR for Windows Hello. Thunderbolt 4 and USB-A ports.",
+      "color": "Grey",
+      "currency": "EUR",
+      "price": 1849
     }
   },
   "detail": {

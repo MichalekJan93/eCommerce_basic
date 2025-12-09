@@ -3,7 +3,6 @@ import MainLayout from "@/components/layout/MainLayout";
 import HomePage from "@/pages/HomePage";
 import ProductsPage from "@/pages/ProductsPage";
 import ProductsPageWrapper from "@/pages/ProductsPageWrapper";
-import CartPage from "@/pages/CartPage";
 import CheckoutPage from "@/pages/CheckoutPage";
 import InfoPage from "@/pages/InfoPage";
 import NotFoundPage from "@/pages/NotFoundPage";
@@ -34,11 +33,6 @@ const router = createBrowserRouter([
         path: `${URL_ENDPOINTS.PRODUCTS}/*`,
         element: <ProductsPageWrapper />,
         handle: { title: "Products" },
-      },
-      {
-        path: URL_ENDPOINTS.CART,
-        element: <CartPage />,
-        handle: { title: "Cart" },
       },
       {
         path: URL_ENDPOINTS.CHECKOUT,

@@ -1,10 +1,13 @@
 {
-    "cart": "Cart",
-    "items": "Items",
-    "noItems": "No items in cart",
-    "total": "Total",
-    "checkout": "Checkout",
-    "continueToCart": "Continue to cart",
-    "addToCart": "Add to cart",
-    "add": "Add"    
+  "cart": "Cart",
+  "items": "Items",
+  "no_items": "No items in cart",
+  "total": "Total",
+  "checkout": "Checkout",
+  "continue_to_cart": "Continue to cart",
+  "add_to_cart": "Add to Cart",
+  "add": "Add",
+  "latest_products": "Latest products",
+  "best_sellers": "Best sellers",
+  "products_for_the_home": "Products for the home"
 }

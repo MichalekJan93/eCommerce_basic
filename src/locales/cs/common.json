@@ -1,10 +1,13 @@
 {
-    "cart": "Košík",
-    "items": "Položky",
-    "noItems": "Žádná položka v košíku",
-    "total": "Celkem",
-    "checkout": "Objednat",
-    "continueToCart": "Pokračovat do košíku",
-    "addToCart": "Přidat do košíku",
-    "add": "Přidat"
+  "cart": "Košík",
+  "items": "Položky",
+  "no_items": "Žádná položka v košíku",
+  "total": "Celkem",
+  "checkout": "Objednat",
+  "continue_to_cart": "Pokračovat do košíku",
+  "add_to_cart": "Do košíku",
+  "add": "Přidat",
+  "latest_products": "Nejnovější produkty",
+  "best_sellers": "Nejprodávanější",
+  "products_for_the_home": "Produkty do domácnosti"
 }

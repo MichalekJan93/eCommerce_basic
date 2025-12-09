@@ -119,6 +119,214 @@
       "color": "Bílý",
       "currency": "CZK",
       "price": 24990
+    },
+    "samsung_s21_green": {
+      "name": "Samsung Galaxy S21 Green",
+      "short_description": "Spolehlivý Samsung Galaxy S21 v osvěžující zelené barvě nabízí výkonný procesor Exynos 2100, kvalitní AMOLED displej a všestranný fotoaparát. Ideální volba pro uživatele hledající solidní výkon za přijatelnou cenu.",
+      "long_description": "Samsung Galaxy S21 Green je elegantní smartphone s moderním designem a osvěžujícím zeleným provedením. Disponuje 6,2palcovým Dynamic AMOLED 2X displejem s rozlišením Full HD+ a obnovovací frekvencí 120 Hz pro plynulé zobrazení. Výkonný procesor Exynos 2100 zajišťuje rychlý chod aplikací a her. Trojitý fotoaparát s hlavním 64Mpx snímačem pořizuje kvalitní fotografie i videa v rozlišení 8K. Baterie s kapacitou 4000 mAh s podporou rychlého nabíjení vydrží po celý den. Telefon je odolný vůči vodě a prachu díky certifikaci IP68.",
+      "color": "Zelená",
+      "currency": "CZK",
+      "price": 12990
+    },
+    "samsung_s22_black": {
+      "name": "Samsung Galaxy S22 Black",
+      "short_description": "Elegantní Samsung Galaxy S22 v klasické černé barvě přináší kompaktní rozměry, výkonný čip Snapdragon 8 Gen 1 a vylepšený 50Mpx fotoaparát. Skvělá volba pro ty, kdo preferují menší telefon s prémiovými funkcemi.",
+      "long_description": "Samsung Galaxy S22 Black kombinuje sofistikovaný černý design s kompaktními rozměry, které pohodlně padnou do ruky. Vybaven 6,1palcovým Dynamic AMOLED 2X displejem s adaptivní obnovovací frekvencí až 120 Hz nabízí vynikající vizuální zážitek. Procesor Snapdragon 8 Gen 1 poskytuje špičkový výkon pro náročné aplikace a hry. Trojitý fotoaparát s 50Mpx hlavním snímačem a optickou stabilizací zachycuje ostré snímky i za zhoršených světelných podmínek. Baterie 3700 mAh podporuje rychlé i bezdrátové nabíjení. Konstrukce s certifikací IP68 zajišťuje odolnost proti vodě a prachu.",
+      "color": "Černá",
+      "currency": "CZK",
+      "price": 16990
+    },
+    "samsung_s23_black": {
+      "name": "Samsung Galaxy S23 Black",
+      "short_description": "Prémiový Samsung Galaxy S23 v elegantní černé nabízí nejnovější Snapdragon 8 Gen 2, vynikající 50Mpx fotoaparát s pokročilým nočním režimem a dlouhou výdrž baterie. Dokonalý smartphone pro náročné uživatele.",
+      "long_description": "Samsung Galaxy S23 Black představuje vrchol řady Galaxy S23 v nadčasovém černém provedení. Disponuje 6,1palcovým Dynamic AMOLED 2X displejem s jasem až 1750 nitů a Vision Booster technologií pro perfektní čitelnost na slunci. Procesor Snapdragon 8 Gen 2 optimalizovaný pro Galaxy zajišťuje extrémní výkon a efektivitu. Trojitý fotoaparát s 50Mpx hlavním snímačem, 12Mpx ultraširokoúhlým a 10Mpx teleobjektivem s 3x optickým zoomem pořizuje profesionální snímky. Vylepšený noční režim a AI zpracování obrazu poskytují výjimečné výsledky i za šera. Baterie 3900 mAh s rychlým nabíjením 25W vydrží celý den intenzivního používání.",
+      "color": "Černá",
+      "currency": "CZK",
+      "price": 21990
+    },
+    "samsung_s23_green": {
+      "name": "Samsung Galaxy S23 Green",
+      "short_description": "Stylový Samsung Galaxy S23 v unikátní zelené barvě kombinuje prémiový design s nejnovějším procesorem Snapdragon 8 Gen 2, pokročilým fotoaparátem a vynikajícím displejem. Pro ty, kdo chtějí vyniknout.",
+      "long_description": "Samsung Galaxy S23 Green zaujme svým elegantním zeleným provedením, které dodává telefonu svěží a moderní vzhled. Vybaven 6,1palcovým Dynamic AMOLED 2X displejem s adaptivní obnovovací frekvencí 48-120 Hz nabízí úžasné barvy a kontrast. Nejnovější procesor Snapdragon 8 Gen 2 for Galaxy poskytuje bezkonkurenční výkon a energetickou účinnost. Fotoaparát s 50Mpx hlavním snímačem, optickou stabilizací a pokročilým AI zpracováním zachycuje detailní fotografie a 8K video. Odolná konstrukce Armor Aluminum s certifikací IP68 a Gorilla Glass Victus 2 chrání telefon před poškozením. Baterie 3900 mAh zajišťuje celodenní výdrž.",
+      "color": "Zelená",
+      "currency": "CZK",
+      "price": 21990
+    },
+    "xiaomi_12_green": {
+      "name": "Xiaomi 12 Green",
+      "short_description": "Kompaktní Xiaomi 12 v zelené barvě nabízí výkonný Snapdragon 8 Gen 1, 50Mpx fotoaparát a rychlé 67W nabíjení. Skvělý poměr ceny a výkonu v elegantním a handlovatelném provedení.",
+      "long_description": "Xiaomi 12 Green je kompaktní vlajková loď s osvěžujícím zeleným designem. Disponuje 6,28palcovým AMOLED displejem s rozlišením Full HD+, obnovovací frekvencí 120 Hz a jasem až 1100 nitů. Procesor Snapdragon 8 Gen 1 poskytuje špičkový výkon pro všechny úkoly. Trojitý fotoaparát s 50Mpx hlavním snímačem Sony IMX766 s optickou stabilizací pořizuje kvalitní snímky ve dne i v noci. Baterie 4500 mAh podporuje ultra rychlé 67W drátové a 50W bezdrátové nabíjení - plné nabití za pouhých 39 minut. Stereo reproduktory Harman Kardon doplňují prémiový audio zážitek.",
+      "color": "Zelená",
+      "currency": "CZK",
+      "price": 11990
+    },
+    "xiaomi_12_blue": {
+      "name": "Xiaomi 12 Blue",
+      "short_description": "Stylový Xiaomi 12 v modré barvě přináší kompaktní design, vlajkový procesor Snapdragon 8 Gen 1, kvalitní 50Mpx fotoaparát a bleskurychlé 67W nabíjení za atraktivní cenu.",
+      "long_description": "Xiaomi 12 Blue kombinuje atraktivní modré provedení s kompaktními rozměry, které pohodlně padnou do jedné ruky. Vybaven 6,28palcovým AMOLED displejem s True Color zobrazením, 120Hz obnovovací frekvencí a technologií Dolby Vision pro úžasný vizuální zážitek. Procesor Snapdragon 8 Gen 1 zajišťuje plynulý chod i těch nejnáročnějších her a aplikací. Fotoaparát s 50Mpx hlavním snímačem, 13Mpx ultraširokoúhlým a 5Mpx telemakro objektivem pokryje všechny fotografické situace. Baterie 4500 mAh s 67W rychlonabíjením se nabije na 100% za méně než 40 minut. Stereo reproduktory s certifikací Harman Kardon poskytují bohatý zvuk.",
+      "color": "Modrá",
+      "currency": "CZK",
+      "price": 11990
+    },
+    "xiaomi_13_blue": {
+      "name": "Xiaomi 13 Blue",
+      "short_description": "Elegantní Xiaomi 13 v modré barvě nabízí spolupráci s Leica optikou, výkonný Snapdragon 8 Gen 2 a prémiový AMOLED displej. Fotografický smartphone pro náročné uživatele.",
+      "long_description": "Xiaomi 13 Blue je vlajkový smartphone s elegantním modrým designem a prémiovou výbavou. Disponuje 6,36palcovým AMOLED displejem s rozlišením 1080 x 2400 pixelů, obnovovací frekvencí 120 Hz, jasem až 1900 nitů a ochranou Gorilla Glass Victus. Procesor Snapdragon 8 Gen 2 poskytuje extrémní výkon a energetickou účinnost. Fotoaparát vyvinutý ve spolupráci s Leica obsahuje 50Mpx hlavní snímač Sony IMX800, 12Mpx ultraširokoúhlý a 10Mpx teleobjektiv s 3,2x optickým zoomem. Leica Authentic a Leica Vibrant režimy nabízejí unikátní fotografické styly. Baterie 4500 mAh s 67W drátovým a 50W bezdrátovým nabíjením zajišťuje celodenní výdrž.",
+      "color": "Modrá",
+      "currency": "CZK",
+      "price": 16990
+    },
+    "xiaomi_14_green": {
+      "name": "Xiaomi 14 Green",
+      "short_description": "Špičkový Xiaomi 14 v zelené barvě přináší nejnovější Snapdragon 8 Gen 3, profesionální Leica fotoaparát s proměnnou clonou a špičkový LTPO AMOLED displej. Vlajková loď pro rok 2024.",
+      "long_description": "Xiaomi 14 Green představuje nejnovější vlajkovou loď v atraktivním zeleném provedení. Vybaven 6,36palcovým LTPO AMOLED displejem s rozlišením 1,5K, obnovovací frekvencí 1-120 Hz, jasem až 3000 nitů a certifikací DisplayMate A+. Nejnovější procesor Snapdragon 8 Gen 3 poskytuje bezkonkurenční výkon a efektivitu. Trojitý fotoaparát Leica Summilux zahrnuje 50Mpx hlavní snímač Light Fusion 900 s proměnnou clonou f/1.42-4.0, 50Mpx ultraširokoúhlý a 50Mpx teleobjektiv s 3,2x optickým zoomem. Baterie 4610 mAh s 90W drátovým a 50W bezdrátovým nabíjením. Certifikace IP68 a Gorilla Glass Victus zajišťují maximální odolnost.",
+      "color": "Zelená",
+      "currency": "CZK",
+      "price": 21990
+    },
+    "xiaomi_14_white": {
+      "name": "Xiaomi 14 White",
+      "short_description": "Prémiový Xiaomi 14 v čisté bílé barvě kombinuje nejnovější technologie včetně Snapdragon 8 Gen 3, profesionálního Leica fotosystému a ultra jasného AMOLED displeje. Dokonalá elegance a výkon.",
+      "long_description": "Xiaomi 14 White zaujme svým elegantním bílým provedením s matnou povrchovou úpravou, které odolává otiskům prstů. Displej o velikosti 6,36 palce využívá technologii LTPO AMOLED s rozlišením 2670 x 1200 pixelů, adaptivní obnovovací frekvencí 1-120 Hz a extrémním jasem 3000 nitů. Procesor Snapdragon 8 Gen 3 s grafikou Adreno 750 poskytuje nejvyšší možný výkon. Fotoaparát Leica Summilux s třemi 50Mpx snímači, proměnnou clonou a pokročilými Leica režimy zachycuje profesionální snímky. Baterie 4610 mAh s ultra rychlým 90W nabíjením dosáhne 100% za pouhých 31 minut. Telefon je odolný díky certifikaci IP68 a ochraně Gorilla Glass Victus.",
+      "color": "Bílá",
+      "currency": "CZK",
+      "price": 21990
+    },
+    "dell_inspiron_silver": {
+      "name": "Dell Inspiron 15 Silver",
+      "short_description": "Cenově dostupný notebook Dell Inspiron 15 v elegantním stříbrném provedení nabízí spolehlivý výkon pro každodenní práci, studium i zábavu. Ideální volba pro domácí uživatele a studenty.",
+      "long_description": "Dell Inspiron 15 Silver je všestranný notebook navržený pro každodenní produktivitu. Disponuje 15,6palcovým Full HD displejem s technologií ComfortView pro snížení modrého světla a ochranu očí. Procesor Intel Core i5 nejnovější generace zajišťuje plynulý chod kancelářských aplikací, prohlížení webu i streamování videí. 8GB RAM a 512GB SSD poskytují dostatek prostoru a rychlosti pro běžné úkoly. Klávesnice s numerickým blokem a velkým touchpadem zvyšuje pohodlí při práci. Baterie vydrží až 8 hodin, což umožňuje celodenní práci bez nabíjení. Notebook je vybaven USB-C, USB 3.2, HDMI a čtečkou SD karet.",
+      "color": "Stříbrná",
+      "currency": "CZK",
+      "price": 15990
+    },
+    "dell_latitute_silver": {
+      "name": "Dell Latitude 5540 Silver",
+      "short_description": "Profesionální firemní notebook Dell Latitude 5540 ve stříbrném provedení nabízí vysokou spolehlivost, pokročilé zabezpečení a výkon pro náročné business aplikace.",
+      "long_description": "Dell Latitude 5540 Silver je prémiový firemní notebook konstruovaný pro maximální spolehlivost a produktivitu. Vybaven 15,6palcovým Full HD IPS displejem s nízkým odrazem a volitelnou dotykovou vrstvou. Procesor Intel Core i7 vPro poskytuje špičkový výkon pro náročné podnikové aplikace a multitasking. 16GB RAM a 512GB SSD s šifrováním zajišťují rychlost a bezpečnost dat. Notebook disponuje pokročilým zabezpečením včetně čtečky otisků prstů, IR kamery pro Windows Hello a TPM 2.0. Odolná konstrukce splňuje vojenské standardy MIL-STD-810H. Výdrž baterie až 10 hodin umožňuje celodenní práci. Kompletní konektivita zahrnuje Thunderbolt 4, USB-A, HDMI 2.0 a microSD.",
+      "color": "Stříbrná",
+      "currency": "CZK",
+      "price": 32990
+    },
+    "dell_xps-black": {
+      "name": "Dell XPS 15 Black",
+      "short_description": "Prémiový ultrabook Dell XPS 15 v elegantní černé barvě kombinuje špičkový výkon, úžasný OLED displej a prémiové materiály. Dokonalý nástroj pro kreativní profesionály.",
+      "long_description": "Dell XPS 15 Black představuje vrchol notebookového designu s využitím karbonových vláken a hliníku pro maximální odolnost při minimální hmotnosti. 15,6palcový 3.5K OLED displej s 100% pokrytím DCI-P3 a jasem 400 nitů poskytuje ohromující vizuální zážitek pro úpravu fotografií a videa. Procesor Intel Core i7-13700H s 14 jádry a grafika NVIDIA GeForce RTX 4060 zvládnou i ty nejnáročnější kreativní úkoly. 32GB DDR5 RAM a 1TB NVMe SSD poskytují extrémní rychlost. Čtyři reproduktory s podporou Dolby Atmos nabízejí prostorový zvuk. Baterie 86Wh vydrží až 13 hodin. Thunderbolt 4 porty umožňují připojení externích monitorů a rychlé nabíjení.",
+      "color": "Černá",
+      "currency": "CZK",
+      "price": 54990
+    },
+    "dell_xps-silver": {
+      "name": "Dell XPS 15 Silver",
+      "short_description": "Elegantní ultrabook Dell XPS 15 ve stříbrném provedení s OLED displejem, výkonným procesorem Intel a prémiovou konstrukcí. Perfektní pro náročné uživatele a profesionály.",
+      "long_description": "Dell XPS 15 Silver kombinuje ikonický stříbrný design s prémiovými materiály včetně frézovaného hliníku a skelného vlákna. Ohromující 15,6palcový 3.5K OLED displej nabízí nekonečný kontrast, živé barvy a podporu HDR pro profesionální práci s obrazem. Procesor Intel Core i7-13700H poskytuje vysoký výkon pro multitasking, úpravu videa a 3D modelování. Grafická karta NVIDIA GeForce RTX 4060 akceleruje kreativní aplikace. 32GB DDR5 RAM zajišťuje plynulou práci s velkými soubory. 1TB SSD nabízí bleskurychlé načítání. Edge-to-edge klávesnice s podsvícením a přesný touchpad zvyšují produktivitu. Výdrž baterie až 13 hodin umožňuje mobilní práci bez kompromisů.",
+      "color": "Stříbrná",
+      "currency": "CZK",
+      "price": 54990
+    },
+    "imac_24_blue": {
+      "name": "iMac 24\" Blue",
+      "short_description": "Elegantní stolní počítač iMac 24\" v modré barvě s čipem Apple M4, úžasným 4.5K Retina displejem a minimalistickým designem. Dokonalé řešení pro domácnost i kancelář.",
+      "long_description": "iMac 24\" Blue přináší svěží modrý design, který oživí každý pracovní prostor. Ohromující 24palcový 4.5K Retina displej s jasem 500 nitů, miliardou barev a technologií True Tone poskytuje perfektní obraz pro kreativní práci i zábavu. Čip Apple M4 s 10jádrovým CPU a 10jádrovým GPU zajišťuje bleskový výkon pro náročné aplikace včetně úpravy 4K videa. 16GB unifikované paměti a 512GB SSD poskytují rychlost a prostor. Šestireproduktorový zvukový systém s prostorovým zvukem a Dolby Atmos nabízí filmový audio zážitek. FaceTime HD kamera s technologií Center Stage a tři mikrofony studiové kvality jsou ideální pro videohovory. Konstrukce o tloušťce pouhých 11,5 mm působí nadčasově.",
+      "color": "Modrá",
+      "currency": "CZK",
+      "price": 42990
+    },
+    "imac_24_green": {
+      "name": "iMac 24\" Green",
+      "short_description": "Stylový iMac 24\" v zelené barvě kombinuje výkonný čip Apple M4, nádherný 4.5K Retina displej a jedinečný design. Perfektní volba pro kreativní práci i každodenní použití.",
+      "long_description": "iMac 24\" Green zaujme svou elegantní zelenou barvou, která dodává pracovnímu prostoru svěží a moderní vzhled. 24palcový 4.5K Retina displej s rozlišením 4480 x 2520 pixelů nabízí neuvěřitelnou ostrost a věrné podání barev díky širokému gamutu P3. Čip Apple M4 poskytuje revoluční výkon díky pokročilé 3nm technologii - až 1,8x rychlejší CPU a 2,2x rychlejší GPU oproti předchozí generaci. 16GB unifikované paměti zajišťuje plynulý multitasking. 512GB SSD nabízí rychlé načítání aplikací a souborů. Pokročilý zvukový systém se šesti reproduktory podporuje prostorový zvuk. Magic Keyboard s Touch ID a Magic Mouse jsou součástí balení. Vše je zabaleno v ultratenké konstrukci o hmotnosti pouze 4,46 kg.",
+      "color": "Zelená",
+      "currency": "CZK",
+      "price": 42990
+    },
+    "ipad_11_pink": {
+      "name": "iPad 11\" Pink",
+      "short_description": "Všestranný iPad 11\" v růžové barvě s čipem Apple A16 Bionic, Liquid Retina displejem a podporou Apple Pencil. Ideální tablet pro práci, studium i kreativitu.",
+      "long_description": "iPad 11\" Pink nabízí stylové růžové provedení v kompaktním a lehkém designu. 11palcový Liquid Retina displej s rozlišením 2388 x 1668 pixelů, jasem 500 nitů a technologií True Tone poskytuje skvělý vizuální zážitek. Čip Apple A16 Bionic zajišťuje vysoký výkon pro náročné aplikace, hry i kreativní práci. 128GB úložiště nabízí dostatek místa pro aplikace, fotografie a dokumenty. 12Mpx zadní fotoaparát s podporou 4K videa a 12Mpx ultraširokoúhlá přední kamera s Center Stage jsou ideální pro focení i videohovory. Podpora Apple Pencil Pro a Magic Keyboard Folio rozšiřuje možnosti využití. USB-C port zajišťuje rychlé nabíjení a přenos dat. Baterie vydrží až 10 hodin.",
+      "color": "Růžová",
+      "currency": "CZK",
+      "price": 12990
+    },
+    "ipad_11_yellow": {
+      "name": "iPad 11\" Yellow",
+      "short_description": "Barevný iPad 11\" ve žluté barvě přináší výkonný čip A16 Bionic, kvalitní Liquid Retina displej a podporu příslušenství Apple. Skvělý společník pro každodenní úkoly.",
+      "long_description": "iPad 11\" Yellow zaujme svou výraznou žlutou barvou, která dodává tabletu hravý a energický vzhled. 11palcový Liquid Retina displej nabízí ostré zobrazení s podporou P3 širokého barevného gamutu a antireflexní úpravou pro pohodlné používání. Procesor Apple A16 Bionic s Neural Engine poskytuje výkon pro nejnáročnější aplikace a pokročilé funkce strojového učení. 128GB flash úložiště pojme tisíce fotografií, aplikací a dokumentů. Přední ultraširokoúhlá kamera s Center Stage automaticky sleduje uživatele během videohovorů. Zadní 12Mpx kamera pořizuje kvalitní fotografie a 4K video. Kompatibilita s Apple Pencil a klávesnicí rozšiřuje produktivitu. Wi-Fi 6 zajišťuje rychlé připojení k internetu.",
+      "color": "Žlutá",
+      "currency": "CZK",
+      "price": 12990
+    },
+    "ipad_pro_black": {
+      "name": "iPad Pro 13\" Black",
+      "short_description": "Profesionální iPad Pro 13\" v černé barvě s revolučním čipem Apple M4, úžasným Ultra Retina XDR displejem a prémiovým výkonem. Ultimátní nástroj pro profesionály.",
+      "long_description": "iPad Pro 13\" Black představuje nejpokročilejší tablet na trhu v elegantním černém provedení. Revoluční 13palcový Ultra Retina XDR displej s technologií tandem OLED nabízí jas až 1600 nitů, XDR kontrast 1 000 000:1 a podporu ProMotion se 120Hz obnovovací frekvencí. Čip Apple M4 s až 10jádrovým CPU a 10jádrovým GPU poskytuje výkon srovnatelný s profesionálními notebooky. 16GB RAM a 512GB SSD zajišťují bleskovou práci s velkými projekty. LiDAR skener a 12Mpx fotoaparát s podporou ProRes videa otevírají profesionální možnosti. Podpora Apple Pencil Pro s haptickou odezvou a Magic Keyboard dělá z iPadu plnohodnotný pracovní nástroj. Face ID a 5G konektivita doplňují prémiový balíček.",
+      "color": "Černá",
+      "currency": "CZK",
+      "price": 39990
+    },
+    "ipad_pro_silver": {
+      "name": "iPad Pro 13\" Silver",
+      "short_description": "Špičkový iPad Pro 13\" ve stříbrné barvě s čipem M4, Ultra Retina XDR displejem a profesionálními funkcemi. Ideální pro kreativní práci a náročné uživatele.",
+      "long_description": "iPad Pro 13\" Silver kombinuje elegantní stříbrný design s nejpokročilejšími technologiemi. 13palcový Ultra Retina XDR displej využívá tandem OLED technologii pro neuvěřitelný jas, kontrast a věrnost barev - ideální pro profesionální úpravu fotografií a videa. Čip Apple M4 postavený na 3nm procesu nabízí bezkonkurenční výkon při zachování celodenní výdrže baterie. 16GB unifikované paměti a 512GB rychlého SSD úložiště zvládnou i ty nejnáročnější pracovní postupy. Přední TrueDepth kamera s Face ID a zadní 12Mpx širokoúhlý fotoaparát s LiDAR skenerem pokrývají veškeré potřeby. Podpora Thunderbolt/USB 4 umožňuje připojení profesionálních monitorů a příslušenství. Ultratenká konstrukce o tloušťce 5,1 mm a hmotnosti 579 g.",
+      "color": "Stříbrná",
+      "currency": "CZK",
+      "price": 39990
+    },
+    "macbook_pro_m5_black": {
+      "name": "MacBook Pro 16\" M5 Black",
+      "short_description": "Nejnovější MacBook Pro 16\" s revolučním čipem Apple M5 v elegantní černé barvě. Špičkový výkon, úžasný Liquid Retina XDR displej a celodenní výdrž baterie pro profesionály.",
+      "long_description": "MacBook Pro 16\" M5 Black představuje vrchol notebookové technologie v sofistikovaném černém provedení Space Black. 16,2palcový Liquid Retina XDR displej s rozlišením 3456 x 2234 pixelů, jasem až 1600 nitů a kontrastem 1 000 000:1 nabízí ohromující vizuální zážitek. Revoluční čip Apple M5 s 14jádrovým CPU a 30jádrovým GPU poskytuje bezprecedentní výkon pro profesionální video editaci, 3D rendering a vývoj aplikací. 48GB unifikované paměti a 1TB SSD zajišťují bleskovou práci s masivními projekty. Šestireproduktorový zvukový systém s prostorovým zvukem a pokročilé mikrofony studiové kvality. Baterie vydrží až 22 hodin přehrávání videa. Thunderbolt 5, HDMI 2.1, SDXC slot a MagSafe 3 poskytují kompletní konektivitu.",
+      "color": "Černá",
+      "currency": "CZK",
+      "price": 89990
+    },
+    "lenovo_ideapad_blue": {
+      "name": "Lenovo IdeaPad Slim 5 Blue",
+      "short_description": "Stylový notebook Lenovo IdeaPad Slim 5 v modré barvě nabízí elegantní design, solidní výkon a skvělou cenu. Ideální pro studenty a domácí uživatele.",
+      "long_description": "Lenovo IdeaPad Slim 5 Blue zaujme svým atraktivním modrým provedením a tenkým profilem o tloušťce pouhých 17,9 mm. 15,6palcový Full HD IPS displej s jasem 300 nitů a 100% pokrytím sRGB poskytuje přesné barvy a široké pozorovací úhly. Procesor AMD Ryzen 7 7730U s 8 jádry zajišťuje plynulý výkon pro práci, studium i zábavu. 16GB DDR5 RAM a 512GB SSD nabízejí rychlost a dostatek prostoru. Integrovaná grafika AMD Radeon zvládne běžné hry a multimédia. Klávesnice s podsvícením a čtečka otisků prstů zvyšují komfort a bezpečnost. Baterie s kapacitou 57Wh vydrží až 12 hodin. Rychlé nabíjení dodá 2 hodiny používání za 15 minut. USB-C, USB-A a HDMI zajišťují všestrannou konektivitu.",
+      "color": "Modrá",
+      "currency": "CZK",
+      "price": 18990
+    },
+    "lenovo_ideapad_grey": {
+      "name": "Lenovo IdeaPad Slim 5 Grey",
+      "short_description": "Elegantní Lenovo IdeaPad Slim 5 v šedé barvě kombinuje moderní design, výkonný hardware a dlouhou výdrž baterie. Skvělá volba pro každodenní produktivitu.",
+      "long_description": "Lenovo IdeaPad Slim 5 Grey nabízí nadčasový šedý design v robustní hliníkové konstrukci. 15,6palcový Full HD IPS displej s antireflexní úpravou a certifikací TÜV Rheinland pro ochranu očí je ideální pro dlouhé pracovní hodiny. Procesor AMD Ryzen 7 7730U poskytuje výkon pro multitasking, videokonference i lehčí kreativní práci. 16GB DDR5 RAM s možností rozšíření a 512GB NVMe SSD zajišťují rychlou odezvu systému. Stereo reproduktory s Dolby Audio nabízejí kvalitní zvuk pro filmy a hudbu. HD webkamera s fyzickou krytkou chrání soukromí. Baterie vydrží až 12 hodin běžného používání. Rapid Charge technologie nabije 80% kapacity za hodinu. Kompletní výbava portů zahrnuje 2x USB-A, USB-C a HDMI 1.4.",
+      "color": "Šedá",
+      "currency": "CZK",
+      "price": 18990
+    },
+    "lenovo_thinkpad_black": {
+      "name": "Lenovo ThinkPad X1 Carbon Black",
+      "short_description": "Ikonický firemní ultrabook Lenovo ThinkPad X1 Carbon v klasické černé barvě. Prémiová konstrukce, špičkový výkon a legendární klávesnice pro profesionály.",
+      "long_description": "Lenovo ThinkPad X1 Carbon Black je synonymem profesionálního notebooku v elegantním matně černém provedení z karbonových vláken. 14palcový 2.8K OLED displej s rozlišením 2880 x 1800 pixelů, 100% pokrytím DCI-P3 a jasem 400 nitů nabízí vizuální dokonalost. Procesor Intel Core Ultra 7 s integrovaným NPU pro AI úlohy poskytuje výjimečný výkon. 32GB LPDDR5x RAM a 1TB PCIe Gen4 SSD zajišťují bleskovou práci. Legendární klávesnice ThinkPad s TrackPointem nabízí nejlepší zážitek z psaní v oboru. Pokročilé zabezpečení zahrnuje Match-on-Chip čtečku otisků prstů, IR kameru a dTPM 2.0. Konstrukce splňující MIL-SPEC standardy váží pouhých 1,09 kg. Baterie vydrží až 15 hodin. Thunderbolt 4, USB-A a HDMI 2.1.",
+      "color": "Černá",
+      "currency": "CZK",
+      "price": 52990
+    },
+    "lenovo_thinkpad_silver": {
+      "name": "Lenovo ThinkPad X1 Carbon Silver",
+      "short_description": "Prémiový ultrabook ThinkPad X1 Carbon ve stříbrném provedení nabízí vynikající výkon, OLED displej a legendární spolehlivost pro náročné profesionály.",
+      "long_description": "Lenovo ThinkPad X1 Carbon Silver přináší ikonickou řadu ThinkPad v moderním stříbrném designu. 14palcový 2.8K OLED displej poskytuje dokonalé černé barvy, nekonečný kontrast a přesné podání barev pro profesionální práci s obrazem. Procesor Intel Core Ultra 7 s Neural Processing Unit akceleruje AI aplikace a zvyšuje produktivitu. 32GB LPDDR5x paměti a 1TB SSD s šifrováním Opal 2.0 nabízejí výkon a bezpečnost enterprise úrovně. Klávesnice ThinkPad s podsvícením a TrackPointem je standardem v oboru. Bezpečnostní funkce zahrnují Windows Hello IR kameru, čtečku otisků prstů a hardwarový TPM. Ultralehká konstrukce z magnéziovo-hliníkové slitiny váží pouze 1,09 kg. Výdrž baterie až 15 hodin. Kompletní konektivita s Thunderbolt 4 a 5G WWAN.",
+      "color": "Stříbrná",
+      "currency": "CZK",
+      "price": 52990
+    },
+    "lenovo_yoga_black": {
+      "name": "Lenovo Yoga 9i Black",
+      "short_description": "Prémiový konvertibilní notebook Lenovo Yoga 9i v černé barvě s OLED displejem, otočným kloubem 360° a stylusem. Dokonalé spojení výkonu a flexibility.",
+      "long_description": "Lenovo Yoga 9i Black je prémiový konvertibilní notebook v elegantním černém provedení s kovovým tělem a ikonickým otočným kloubem. 14palcový 2.8K OLED dotykový displej s rozlišením 2880 x 1800 pixelů, 100% pokrytím DCI-P3 a 90Hz obnovovací frekvencí nabízí ohromující vizuální zážitek. Procesor Intel Core Ultra 7 s Evo certifikací zajišťuje bleskový výkon a okamžité probuzení. 32GB LPDDR5x RAM a 1TB SSD poskytují kapacitu pro náročné projekty. Čtyři reproduktory Bowers & Wilkins s Dolby Atmos nabízejí prostorový zvuk. Lenovo Precision Pen je integrován přímo v těle notebooku. Baterie vydrží až 14 hodin, rychlé nabíjení dodá 4 hodiny za 30 minut. 360° kloub umožňuje režimy notebook, stan, tablet a prezentace.",
+      "color": "Černá",
+      "currency": "CZK",
+      "price": 45990
+    },
+    "lenovo_yoga_grey": {
+      "name": "Lenovo Yoga 9i Grey",
+      "short_description": "Elegantní konvertibilní Lenovo Yoga 9i v šedé barvě s dotykovým OLED displejem, integrovaným stylusem a prémiovým audio systémem Bowers & Wilkins.",
+      "long_description": "Lenovo Yoga 9i Grey kombinuje sofistikovaný šedý design s maximální flexibilitou konvertibilního notebooku. 14palcový 2.8K OLED dotykový displej s HDR podporou, nekonečným kontrastem a technologií PureSight nabízí profesionální kvalitu obrazu. Otočný 360° kloub umožňuje plynulý přechod mezi režimy pro práci, kreativitu i relaxaci. Procesor Intel Core Ultra 7 s Intel Arc grafikou poskytuje výkon pro kreativní aplikace a produktivitu. 32GB paměti a 1TB úložiště zvládnou náročné multitasking scénáře. Prémiový audio systém Bowers & Wilkins se čtyřmi reproduktory nabízí studiový zvuk. Lenovo Precision Pen uložený v těle je vždy po ruce. Baterie s výdrží 14 hodin a rychlým nabíjením. Webkamera s Full HD rozlišením a IR pro Windows Hello. Thunderbolt 4 a USB-A porty.",
+      "color": "Šedá",
+      "currency": "CZK",
+      "price": 45990
     }
   },
   "detail": {

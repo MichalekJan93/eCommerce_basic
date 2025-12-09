@@ -3,4 +3,7 @@
 - [ ] HomePage
 - [ ] Add all products data
 - [ ] Add Pagination
-- [ ] Add Cart
+
+## BUGS
+
+- [ ] bad conversion of price in product detail page and product card

@@ -19,10 +19,13 @@ import {
 import { useTranslate } from "@/utils/translate";
 import Typography from "../basic/typography/Typography";
 import { formatPrice } from "@/utils/price";
+import { useNavigate } from "react-router-dom";
+import { URL_ENDPOINTS } from "@/app/Router";
 
 const Cart = observer(() => {
   const store = useCartStore();
   const translate = useTranslate();
+  const navigate = useNavigate();
 
   return (
     <Sheet>
@@ -102,7 +105,7 @@ const Cart = observer(() => {
                 </div>
               ))
             ) : (
-              <Typography type="muted" intlId="noItems" />
+              <Typography type="muted" intlId="no_items" />
             )}
           </div>
           <div className="border-t border-border py-3 text-right">
@@ -112,9 +115,14 @@ const Cart = observer(() => {
             <Button
               size="sm"
               className="bg-primary text-primary-foreground hover:bg-primary/80 w-full mt-4"
+              onClick={() => navigate(URL_ENDPOINTS.INFO)}
             >
               <ArrowBigRight className="w-4 h-4" />
-              <Typography type="p" className="ml-1" intlId="common:addToCart" />
+              <Typography
+                type="p"
+                className="ml-1"
+                intlId="common:add_to_cart"
+              />
             </Button>
           </div>
         </div>

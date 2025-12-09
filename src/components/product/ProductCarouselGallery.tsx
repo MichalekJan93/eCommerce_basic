@@ -25,7 +25,7 @@ const ProductCarouselGallery = ({ data }: IProductCarouselGallery) => {
           {data.map((product) => (
             <CarouselItem
               key={product.id}
-              className="pl-2 sm:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
+              className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
             >
               <ProductCard product={product} />
             </CarouselItem>
