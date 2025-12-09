@@ -184,9 +184,11 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
             disabled={product.stock === 0}
           >
             <ShoppingBag className="w-5 h-5 mr-2" />
-            <Typography type="p" className="inline mt-0">
-              {translate("products:detail.add_to_cart")}
-            </Typography>
+            <div>
+              <Typography type="p" className="inline mt-0">
+                {translate("products:detail.add_to_cart")}
+              </Typography>
+            </div>
           </Button>
           <div className="pt-2 sm:pt-4">
             <Typography type="H4" intlId="products:detail.description" />

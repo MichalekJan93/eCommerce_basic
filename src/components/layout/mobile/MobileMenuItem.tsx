@@ -11,17 +11,20 @@ import { getCategoryFullPathSegments } from "@/utils/catalog";
 interface MobileMenuItemProps {
   titleIntlId: string;
   categories: SubCategory[];
+  onClose: () => void;
 }
 
 const MobileMenuItem = memo(
-  ({ titleIntlId, categories }: MobileMenuItemProps) => {
+  ({ titleIntlId, categories, onClose }: MobileMenuItemProps) => {
     const translate = useTranslate();
     const [isOpen, setIsOpen] = useState(false);
 
     return (
       <div className="border-b border-border">
         <button
-          onClick={() => setIsOpen((prev) => !prev)}
+          onClick={() => {
+            setIsOpen((prev) => !prev);
+          }}
           className="flex w-full items-center justify-between py-3 text-left font-medium cursor-pointer"
         >
           {translate(titleIntlId)}
@@ -48,13 +51,19 @@ const MobileMenuItem = memo(
 
                 return (
                   <div key={category.id}>
-                    <Link to={categoryUrl} className="flex items-center gap-3">
+                    <Link
+                      to={categoryUrl}
+                      className="flex items-center gap-3"
+                      onClick={onClose}
+                    >
                       <img
                         src={category.image}
                         alt=""
                         className="h-8 w-8 object-contain"
                       />
-                      <Typography intlId={category.titleIntlId} type="p" />
+                      <div>
+                        <Typography intlId={category.titleIntlId} type="p" />
+                      </div>
                     </Link>
                     <div className="mt-1 flex flex-wrap gap-2 pl-11">
                       {category.subCategories &&
@@ -72,7 +81,8 @@ const MobileMenuItem = memo(
                             <Link
                               key={subCategory.id}
                               to={subCategoryUrl}
-                              className="text-xs text-primary hover:underline"
+                              className="text-sm text-primary hover:underline"
+                              onClick={onClose}
                             >
                               {translate(subCategory.titleIntlId)}
                             </Link>

@@ -1,6 +1,13 @@
-const TypographyP = ({ children, ...props }: { children: React.ReactNode }) => {
+const TypographyP = ({
+  children,
+  className,
+  ...props
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
   return (
-    <p className="leading-7 not-first:mt-6" {...props}>
+    <p className={`leading-7 not-first:mt-6 ${className}`} {...props}>
       {children}
     </p>
   );

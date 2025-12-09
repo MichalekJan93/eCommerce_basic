@@ -11,12 +11,14 @@ import MobileMenuItem from "./MobileMenuItem";
 import { LanguageSwitcher } from "../LanguageSwitcher";
 import ThemeSwitcher from "../ThemeSwitcher";
 import { useProductStore } from "@/hooks/useStore";
+import { useState } from "react";
 
 const MobileNavBar = () => {
   const { categories } = useProductStore();
+  const [open, setOpen] = useState(false);
 
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button variant="outline" size="icon">
           <Menu />
@@ -33,6 +35,7 @@ const MobileNavBar = () => {
                 key={item.titleIntlId}
                 titleIntlId={item.titleIntlId}
                 categories={item.subCategories}
+                onClose={() => setOpen(false)}
               />
             ))}
           </nav>

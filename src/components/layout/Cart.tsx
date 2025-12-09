@@ -21,14 +21,21 @@ import Typography from "../basic/typography/Typography";
 import { formatPrice } from "@/utils/price";
 import { useNavigate } from "react-router-dom";
 import { URL_ENDPOINTS } from "@/app/Router";
+import { useState } from "react";
 
 const Cart = observer(() => {
   const store = useCartStore();
   const translate = useTranslate();
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
+
+  const handleCheckout = () => {
+    setOpen(false);
+    navigate(URL_ENDPOINTS.INFO);
+  };
 
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button variant="outline" size="icon" className="relative">
           <ShoppingBasket />
@@ -57,7 +64,7 @@ const Cart = observer(() => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="h-12 w-12  shrink-0"
+                    className="h-auto w-12  shrink-0"
                   />
                   <div className="flex flex-1 flex-col gap-1">
                     <Typography
@@ -115,14 +122,16 @@ const Cart = observer(() => {
             <Button
               size="sm"
               className="bg-primary text-primary-foreground hover:bg-primary/80 w-full mt-4"
-              onClick={() => navigate(URL_ENDPOINTS.INFO)}
+              onClick={handleCheckout}
             >
               <ArrowBigRight className="w-4 h-4" />
-              <Typography
-                type="p"
-                className="ml-1"
-                intlId="common:add_to_cart"
-              />
+              <div>
+                <Typography
+                  type="p"
+                  className="ml-1"
+                  intlId="common:add_to_cart"
+                />
+              </div>
             </Button>
           </div>
         </div>
