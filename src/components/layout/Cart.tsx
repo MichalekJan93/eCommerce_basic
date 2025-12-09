@@ -1,4 +1,10 @@
-import { Minus, Plus, ShoppingBasket, Trash2 } from "lucide-react";
+import {
+  ArrowBigRight,
+  Minus,
+  Plus,
+  ShoppingBasket,
+  Trash2,
+} from "lucide-react";
 import Button from "../ui/button";
 import { Badge } from "../ui/badge";
 import { observer } from "mobx-react-lite";
@@ -103,6 +109,13 @@ const Cart = observer(() => {
             <Typography type="H4">
               {translate("common:total")}: {formatPrice(store.totalPrice)}
             </Typography>
+            <Button
+              size="sm"
+              className="bg-primary text-primary-foreground hover:bg-primary/80 w-full mt-4"
+            >
+              <ArrowBigRight className="w-4 h-4" />
+              <Typography type="p" className="ml-1" intlId="common:addToCart" />
+            </Button>
           </div>
         </div>
       </SheetContent>

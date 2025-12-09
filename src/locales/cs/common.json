@@ -2,5 +2,9 @@
     "cart": "Košík",
     "items": "Položky",
     "noItems": "Žádná položka v košíku",
-    "total": "Celkem"
+    "total": "Celkem",
+    "checkout": "Objednat",
+    "continueToCart": "Pokračovat do košíku",
+    "addToCart": "Přidat do košíku",
+    "add": "Přidat"
 }

@@ -2,5 +2,9 @@
     "cart": "Cart",
     "items": "Items",
     "noItems": "No items in cart",
-    "total": "Total"
+    "total": "Total",
+    "checkout": "Checkout",
+    "continueToCart": "Continue to cart",
+    "addToCart": "Add to cart",
+    "add": "Add"    
 }

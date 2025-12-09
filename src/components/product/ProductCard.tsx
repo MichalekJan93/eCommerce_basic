@@ -64,8 +64,16 @@ const ProductCard = ({ product }: ProductCardProps) => {
         }
       >
         <ShoppingBag className="w-4 h-4" />
-        <span className="hidden xs:inline ml-1">Add to cart</span>
-        <span className="xs:hidden ml-1">Add</span>
+        <Typography
+          type="p"
+          className="hidden xs:inline ml-1"
+          intlId="common:add"
+        />
+        <Typography
+          type="p"
+          className="xs:hidden ml-1"
+          intlId="common:addToCart"
+        />
       </Button>
     </Card>
   );
