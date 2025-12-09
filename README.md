@@ -1,8 +1,9 @@
 ## TODO
 
-- [ ] HomePage
 - [ ] Add all products data
-- [ ] Add Pagination
+- [ ] Info page translate
+- [ ] 404 page translate
+- [ ] Add tests
 
 ## BUGS
 

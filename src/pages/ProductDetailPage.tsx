@@ -4,8 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useCartStore, useProductStore } from "@/hooks/useStore";
 import { useTranslate } from "@/utils/translate";
 import { getLocalizedPrice, formatPrice } from "@/utils/price";
-import { useNavigate, Link } from "react-router-dom";
-import { ShoppingBag, Star, ArrowLeft, Check, PackageX } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ShoppingBag, Star, Check } from "lucide-react";
 import { URL_ENDPOINTS } from "@/app/Router";
 import ProductCarouselGallery from "@/components/product/ProductCarouselGallery";
 import ProductGallery from "@/components/product/ProductGallery";
@@ -18,7 +18,6 @@ interface ProductDetailPageProps {
 }
 
 const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
-  const navigate = useNavigate();
   const translate = useTranslate();
 
   const productStore = useProductStore();
@@ -37,44 +36,9 @@ const ProductDetailPage = ({ productSlug }: ProductDetailPageProps) => {
       );
   }, [productStore.products, product]);
 
+  // 404 page
   if (!product) {
-    return (
-      <div className="py-12 flex justify-center">
-        <Card className="w-full max-w-xl">
-          <CardContent className="flex flex-col items-center gap-4 text-center py-10">
-            <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center">
-              <PackageX className="w-8 h-8 text-muted-foreground" />
-            </div>
-            <Typography type="H3">Produkt nebyl nalezen</Typography>
-            <Typography type="muted" className="max-w-md">
-              Tento produkt už není k dispozici nebo byl přesunut. Zkuste se
-              vrátit zpět nebo pokračujte v prohlížení dalších produktů.
-            </Typography>
-            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center">
-              <Button
-                variant="outline"
-                className="w-full sm:w-auto"
-                onClick={() => navigate(-1)}
-              >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                <Typography type="p" className="mt-0">
-                  Zpět
-                </Typography>
-              </Button>
-              <Button
-                className="w-full sm:w-auto"
-                onClick={() => navigate(URL_ENDPOINTS.PRODUCTS)}
-              >
-                <ShoppingBag className="w-4 h-4 mr-2" />
-                <Typography type="p" className="mt-0">
-                  Pokračovat v nákupu
-                </Typography>
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    );
+    return null;
   }
 
   const price = getLocalizedPrice(product.price);
