@@ -1,6 +1,6 @@
 ##TODO
 
-[ ] HomePage
-[ ] Add all products data
-[ ] Add Pagination
-[ ] Add Cart
+- [ ] HomePage
+- [ ] Add all products data
+- [ ] Add Pagination
+- [ ] Add Cart
