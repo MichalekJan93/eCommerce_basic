@@ -1,13 +1,11 @@
 {
   "category": {
     "phones": "Phones",
-    "computers": "Computers",
-    "appliances": "Appliances"
+    "computers": "Computers"
   },
   "category_description": {
     "phones": "Latest phones from the most popular brands.",
-    "computers": "Latest computers from the most popular brands.",
-    "appliances": "Latest appliances from the most popular brands."
+    "computers": "Latest computers from the most popular brands."
   },
   "sub_category": {
     "iphone": "iPhone",
@@ -16,9 +14,6 @@
     "apple": "Apple",
     "lenovo": "Lenovo",
     "dell": "Dell",
-    "refrigerator": "Refrigerator",
-    "freezer": "Freezer",
-    "washing_machine": "Washing Machine",
     "iphone_17": "iPhone 17",
     "iphone_16": "iPhone 16",
     "iphone_15": "iPhone 15",

@@ -3,16 +3,9 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
-import { useProductStore } from "@/hooks/useStore";
 import { observer } from "mobx-react-lite";
 
 const MainLayout = observer(() => {
-  const store = useProductStore();
-
-  if (!store.isLoaded) {
-    return null;
-  }
-
   return (
     <div className="min-h-screen flex flex-col">
       <ScrollToTop />

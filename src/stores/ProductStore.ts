@@ -4,27 +4,6 @@ import type { Category, Product, SubCategory } from "@/types/types";
 import { getLocalizedPrice } from "@/utils/price";
 import { makeAutoObservable } from "mobx";
 
-/**
- * Recursively search for a category by ID in the category tree
- */
-const findCategoryById = (
-  categories: (Category | SubCategory)[],
-  categoryId: string
-): Category | SubCategory | null => {
-  for (const category of categories) {
-    if (category.id === categoryId) {
-      return category;
-    }
-    if (category.subCategories && category.subCategories.length > 0) {
-      const found = findCategoryById(category.subCategories, categoryId);
-      if (found) {
-        return found;
-      }
-    }
-  }
-  return null;
-};
-
 export class ProductStore {
   products: Product[] = [];
   selectedCategory: Category | SubCategory | null = null;
@@ -34,23 +13,35 @@ export class ProductStore {
 
   constructor() {
     makeAutoObservable(this);
-    this.loadProducts();
-  }
-
-  /**
-   * Load products from data file
-   */
-  loadProducts = () => {
     this.products = allProducts;
-    this.loading = true;
-  };
+  }
 
   /**
-   * Get loading state
+   * Recursively search for a category by ID in the category tree
+   * @param categories - Category tree
+   * @param categoryId - Category ID
+   * @returns Category | SubCategory | null
    */
-  get isLoaded() {
-    return this.loading;
-  }
+  private _findCategoryById = (
+    categories: (Category | SubCategory)[],
+    categoryId: string
+  ): Category | SubCategory | null => {
+    for (const category of categories) {
+      if (category.id === categoryId) {
+        return category;
+      }
+      if (category.subCategories && category.subCategories.length > 0) {
+        const found = this._findCategoryById(
+          category.subCategories,
+          categoryId
+        );
+        if (found) {
+          return found;
+        }
+      }
+    }
+    return null;
+  };
 
   /**
    * Set selected category
@@ -61,7 +52,7 @@ export class ProductStore {
       this.selectedCategory = null;
       return;
     }
-    this.selectedCategory = findCategoryById(allCategories, categoryId);
+    this.selectedCategory = this._findCategoryById(allCategories, categoryId);
   };
 
   /**
@@ -142,6 +133,6 @@ export class ProductStore {
    * Get active filters
    */
   get hasActiveFilters() {
-    return this.selectedCategory !== undefined || this.searchQuery !== "";
+    return this.selectedCategory !== null || this.searchQuery !== "";
   }
 }

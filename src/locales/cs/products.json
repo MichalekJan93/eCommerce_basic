@@ -1,13 +1,11 @@
 {
   "category": {
     "phones": "Telefony",
-    "computers": "Počítače",
-    "appliances": "Spotřebiče"
+    "computers": "Počítače"
   },
   "category_description": {
     "phones": "Nejnovější telefony od nejpopulárnějších značek.",
-    "computers": "Nejnovější počítače od nejpopulárnějších značek.",
-    "appliances": "Nejnovější spotřebiče od nejpopulárnějších značek."
+    "computers": "Nejnovější počítače od nejpopulárnějších značek."
   },
   "sub_category": {
     "iphone": "iPhone",
@@ -16,9 +14,6 @@
     "apple": "Apple",
     "lenovo": "Lenovo",
     "dell": "Dell",
-    "refrigerator": "Lednice",
-    "freezer": "Mrazáky",
-    "washing_machine": "Pračky",
     "iphone_17": "iPhone 17",
     "iphone_16": "iPhone 16",
     "iphone_15": "iPhone 15",
