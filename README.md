@@ -16,31 +16,18 @@ in the project** – they are not loaded from any external API.
 
 **Runtime / UI**
 
-- **React 19** and **React DOM** – building the user interface and SPA architecture
-- **React Router DOM** – client‑side routing between pages (URLs, navigation)
-- **MobX** and **mobx-react-lite** – application state management
-- **Tailwind CSS 4** – utility‑first CSS framework for fast and consistent styling
-- **tailwind-merge**, **tailwindcss-animate**, **tw-animate-css** – helpers for Tailwind
-  class composition and animations
-- **shadcn/ui** – component library for building accessible, reusable React UI
-  (built on top of Radix UI primitives)
-- **i18next**, **react-i18next**, **i18next-browser-languagedetector** – localisation
-  and language detection
-- **lucide-react** – icon set (SVG icons)
-- **class-variance-authority**, **clsx** – building component variants and composing
-  CSS class names
+- **React 19** and **React DOM**
+- **React Router DOM**
+- **MobX** and **mobx-react-lite**
+- **Tailwind CSS 4**
+- **shadcn/ui**
+- **i18next**, **react-i18next**, **i18next-browser-languagedetector**
 
 **Tooling / development**
 
-- **Vite 7** – fast dev server and bundler
-- **TypeScript 5** – typing and better DX
-- **ESLint** (`eslint`, `@eslint/js`, `eslint-plugin-react-hooks`,
-  `eslint-plugin-react-refresh`, `typescript-eslint`, `globals`) – linting and code
-  quality checks
-- **@vitejs/plugin-react**, **babel-plugin-react-compiler** – React integration and
-  optimisations in Vite
-- **@types/react**, **@types/react-dom**, **@types/node** – TypeScript type
-  definitions for libraries
+- **Vite 7**
+- **TypeScript 5**
+- **ESLint**
 
 ---
 
