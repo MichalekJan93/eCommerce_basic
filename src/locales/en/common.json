@@ -9,5 +9,12 @@
   "add": "Add",
   "latest_products": "Latest products",
   "best_sellers": "Best sellers",
-  "products_for_the_home": "Products for the home"
+  "products_for_the_home": "Products for the home",
+  "not_found_title": "Page not found",
+  "not_found_description": "The page you are looking for does not exist or has been moved.",
+  "not_found_go_back": "Go back",
+  "not_found_go_home": "Go to homepage",
+  "info_demo_title": "Demo Page",
+  "info_demo_description": "This is a presentation e-commerce website created to showcase my experience with React, TypeScript, and modern web development technologies.",
+  "info_demo_note": "The page you were looking for is not implemented as this is only a demo project."
 }

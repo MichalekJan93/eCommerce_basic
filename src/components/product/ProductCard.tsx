@@ -14,17 +14,19 @@ import { URL_ENDPOINTS } from "@/app/Router";
 import { getProductPathSegments } from "@/utils/catalog";
 import { getFormattedPrice, getLocalizedPrice } from "@/utils/price";
 import { useCartStore } from "@/hooks/useStore";
+import { observer } from "mobx-react-lite";
+import { useTranslate } from "@/utils/translate";
 
 export interface ProductCardProps {
   product: Product;
 }
 
-const ProductCard = ({ product }: ProductCardProps) => {
+const ProductCard = observer(({ product }: ProductCardProps) => {
   const cartStore = useCartStore();
-
   const formattedPrice = getFormattedPrice(product.price);
   const segments = getProductPathSegments(product);
   const productUrl = `${URL_ENDPOINTS.PRODUCTS}/${segments.join("/")}`;
+  useTranslate();
 
   return (
     <Card className="w-full text-center p-2 sm:p-3 hover:border-primary relative flex flex-col h-full transition-all duration-300 ease-in-out">
@@ -79,6 +81,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
       </Button>
     </Card>
   );
-};
+});
 
 export default ProductCard;

@@ -337,6 +337,7 @@
     "pieces": "pcs",
     "in_stock": "In stock",
     "out_of_stock": "Out of stock",
-    "add_to_cart": "Add to cart"
+    "add_to_cart": "Add to cart",
+    "ratingDetailPage": "{{rating}} ({{reviewsCount}} reviews)"
   }
 }

@@ -9,5 +9,12 @@
   "add": "Přidat",
   "latest_products": "Nejnovější produkty",
   "best_sellers": "Nejprodávanější",
-  "products_for_the_home": "Produkty do domácnosti"
+  "products_for_the_home": "Produkty do domácnosti",
+  "not_found_title": "Stránka nenalezena",
+  "not_found_description": "Stránka, kterou hledáte, neexistuje nebo byla přesunuta.",
+  "not_found_go_back": "Zpět",
+  "not_found_go_home": "Přejít na úvodní stránku",
+  "info_demo_title": "Ukázková stránka",
+  "info_demo_description": "Toto je prezentační e-shop vytvořený pro ukázku mých zkušeností s Reactem, TypeScriptem a moderními webovými technologiemi.",
+  "info_demo_note": "Stránka, kterou jste hledali, není implementovaná, protože jde pouze o demo projekt."
 }

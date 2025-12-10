@@ -337,6 +337,7 @@
     "pieces": "ks",
     "in_stock": "Skladem",
     "out_of_stock": "Není skladem",
-    "add_to_cart": "Přidat do košíku"
+    "add_to_cart": "Přidat do košíku",
+    "ratingDetailPage": "{{rating}} ({{reviewsCount}} recenzí)"
   }
 }
