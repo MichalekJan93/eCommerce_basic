@@ -34,7 +34,7 @@ in the project** – they are not loaded from any external API.
 ## Requirements
 
 - **Node.js** version 18 or newer (18+ recommended)
-- **npm** (or alternatively `pnpm` / `yarn` – examples below use `npm`)
+- **pnpm** (recommended package manager)
 
 ---
 
@@ -50,13 +50,14 @@ in the project** – they are not loaded from any external API.
 2. Install dependencies:
 
    ```bash
-   npm install
+   pnpm install
    ```
 
-   > If you use a different package manager:
+   > If you don't have pnpm installed:
    >
-   > - `pnpm install`
-   > - `yarn install`
+   > ```bash
+   > npm install -g pnpm
+   > ```
 
 ---
 
@@ -65,7 +66,7 @@ in the project** – they are not loaded from any external API.
 Start the Vite dev server (typically available at `http://localhost:5173`):
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ---
@@ -75,13 +76,13 @@ npm run dev
 Create a production build:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 Preview the production build locally (Vite preview):
 
 ```bash
-npm run preview
+pnpm preview
 ```
 
 ---
@@ -91,36 +92,56 @@ npm run preview
 Run ESLint on the whole project:
 
 ```bash
-npm run lint
+pnpm lint
 ```
 
 ---
 
 ## Unit tests (Vitest)
 
-The project is intended to use **unit tests with [Vitest](https://vitest.dev/)**.
+The project uses **[Vitest](https://vitest.dev/)** for unit testing with **React Testing Library** for component tests.
 
-Current status:
+### Running tests
 
-- The core application is ready, but **Vitest is not configured yet**
-  (the dependency and test scripts will be added later).
-- This README already contains a dedicated section so it is clear that tests will
-  be written using **Vitest**.
+Run all tests once:
 
-Plan:
+```bash
+pnpm test run
+```
 
-- Add the `vitest` dependency (and possibly `@vitest/ui`, etc.) to `devDependencies`
-- Configure test scripts in `package.json`, for example:
+Run tests in watch mode:
 
-  ```json
-  "scripts": {
-    "test": "vitest",
-    "test:watch": "vitest --watch"
-  }
-  ```
+```bash
+pnpm test
+```
 
-- Gradually add unit tests for key parts of the application (stores, components,
-  utility functions, ...)
+Run tests with UI:
 
-Until then, this README serves as documentation of the intention that
-**unit tests will be implemented using Vitest**.
+```bash
+pnpm test:ui
+```
+
+Run tests with coverage:
+
+```bash
+pnpm test:coverage
+```
+
+### Test coverage
+
+The project currently has **101 tests** covering:
+
+- **Utils** (51 tests)
+
+  - `slug.ts` - Text slugification (12 tests)
+  - `price.ts` - Price formatting and localization (13 tests)
+  - `catalog.ts` - Category and product path handling (26 tests)
+
+- **Components** (50 tests)
+  - `ProductCard` - Product card component (14 tests)
+  - `ProductCards` - Product grid component (8 tests)
+  - `ProductGallery` - Image gallery component (9 tests)
+  - `ProductCategoryCard` - Category card component (9 tests)
+  - `ProductCarouselGallery` - Carousel gallery component (10 tests)
+
+For more details, see [src/test/README.md](src/test/README.md).
